@@ -1,0 +1,17 @@
+{
+  "name": "@8n/vbyte",
+  "version": "0.0.2",
+  "main": "_.js",
+  "repository": "https://github.com/i18n-site/node.git",
+  "homepage": "https://github.com/i18n-site/node/tree/main/vbyte",
+  "license": "Apache-2.0",
+  "author": "i18n.site@gmail.com",
+  "exports": {
+    ".": "./_.js",
+    "./*": "./*"
+  },
+  "files": [
+    "*.wasm",
+    "*.ts"
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "name": "@8n/i18n",
+  "version": "0.0.5",
+  "repository": "https://github.com/i18n-site/node.git",
+  "homepage": "https://github.com/i18n-site/node/tree/main/i18n",
+  "author": "i18n.site@gmail.com",
+  "license": "BSL1.1 ",
+  "exports": {
+    ".": "./lib/index.js",
+    "./*": "./lib/*"
+  },
+  "files": [
+    "lib/*"
+  ],
+  "bin": {
+    "i18n": "./lib/i18n.js"
+  },
+  "scripts": {},
+  "type": "module",
+  "dependencies": {
+    "@w5/bar": "^0.0.5",
+    "@w5/binmap": "^0.0.5",
+    "@w5/ext": "^0.0.1",
+    "@w5/lang": "^0.0.5",
+    "@w5/tran": "^0.0.6",
+    "@w5/u8": "^0.0.3",
+    "@w5/utf8": "^0.0.3",
+    "@w5/walk": "^0.0.1",
+    "@w5/write": "^0.0.1",
+    "@w5/xxhash3-wasm": "^0.0.6",
+    "@8n/cache": "^0.0.2",
+    "@8n/cache_map": "^0.0.11",
+    "@8n/is-change": "^0.0.9",
+    "@8n/nt": "^0.0.12",
+    "@8n/tran_md": "^0.0.8",
+    "@8n/vbyte": "^0.0.2",
+    "yargs": "^17.7.2"
+  }
+}

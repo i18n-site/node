@@ -1,0 +1,23 @@
+{
+  "name": "@8n/cache_map",
+  "version": "0.0.11",
+  "repository": "https://github.com/i18n-site/node.git",
+  "homepage": "https://github.com/i18n-site/node/tree/main/cache_map",
+  "author": "i18n.site@gmail.com",
+  "license": "BSL1.1 ",
+  "exports": {
+    ".": "./lib/index.js",
+    "./*": "./lib/*"
+  },
+  "files": [
+    "lib/*"
+  ],
+  "devDependencies": {},
+  "scripts": {},
+  "type": "module",
+  "dependencies": {
+    "@w5/binmap": "^0.0.5",
+    "@w5/utf8": "^0.0.3",
+    "@w5/write": "^0.0.1"
+  }
+}

@@ -1,0 +1,9 @@
+# wasm
+
+wasm wrapper for rust BTreeSet https://doc.rust-lang.org/std/collections/struct.BTreeSet.html
+
+use :
+<+ ./test.coffee >
+
+out :
+<+ ./out.txt >

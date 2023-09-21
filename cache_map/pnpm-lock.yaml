@@ -1,0 +1,30 @@
+lockfileVersion: '6.0'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
+dependencies:
+  '@w5/binmap':
+    specifier: ^0.0.5
+    version: 0.0.5
+  '@w5/utf8':
+    specifier: ^0.0.3
+    version: 0.0.3
+  '@w5/write':
+    specifier: ^0.0.1
+    version: 0.0.1
+
+packages:
+
+  /@w5/binmap@0.0.5:
+    resolution: {integrity: sha512-Lop1RSXpoM9kacbmer932AWjktEiZGUVtBmoXfqpXiIBNIdvtmuLJiKAWfE0n1Pnx8rYZyiMDZicTWGf8rf1fg==}
+    dev: false
+
+  /@w5/utf8@0.0.3:
+    resolution: {integrity: sha512-FYkLRJ++nxAVLAzsD953X/Yc7ln7QQeUD2UsbbmtEUDYQYK2kvA7vqqKgwjuMQFUqwJdYdcHx7qtP7IgMUdHsw==}
+    dev: false
+
+  /@w5/write@0.0.1:
+    resolution: {integrity: sha512-VyQXX2C3yRqfS7D5B+yCcsR1tvzZ1DzPLi5kugBOe/EeL+LOD3ftFamfik7wQr2TG7XQ7VF0snUpqVLaytwfOA==}
+    dev: false
