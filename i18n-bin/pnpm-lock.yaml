@@ -3,3 +3,35 @@ lockfileVersion: '6.0'
 settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
+
+dependencies:
+  '@8n/lang':
+    specifier: ^0.0.2
+    version: 0.0.2
+  '@w5/u8':
+    specifier: ^0.0.3
+    version: 0.0.3
+  '@w5/utf8':
+    specifier: ^0.0.3
+    version: 0.0.3
+  '@w5/write':
+    specifier: ^0.0.1
+    version: 0.0.1
+
+packages:
+
+  /@8n/lang@0.0.2:
+    resolution: {integrity: sha512-6Nd7Dz8Pdj2xPDhjlpfgsBnKn4swIFfkDjHdcmPq85Zdt/fIWIzmmUGg3SMmLmSD+bILmkYIdn2jszlyz3qS5A==}
+    dev: false
+
+  /@w5/u8@0.0.3:
+    resolution: {integrity: sha512-2AGCc0Doaa6iYhcXCaTtOJkKSN/FDuolqj/5eo5/pI9hUYBgFW+juci7v9qc5J2Rm9abOYIa2uND9oaJXhsnBw==}
+    dev: false
+
+  /@w5/utf8@0.0.3:
+    resolution: {integrity: sha512-FYkLRJ++nxAVLAzsD953X/Yc7ln7QQeUD2UsbbmtEUDYQYK2kvA7vqqKgwjuMQFUqwJdYdcHx7qtP7IgMUdHsw==}
+    dev: false
+
+  /@w5/write@0.0.1:
+    resolution: {integrity: sha512-VyQXX2C3yRqfS7D5B+yCcsR1tvzZ1DzPLi5kugBOe/EeL+LOD3ftFamfik7wQr2TG7XQ7VF0snUpqVLaytwfOA==}
+    dev: false

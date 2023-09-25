@@ -12,7 +12,12 @@
   "files": [
     "lib/*"
   ],
-  "devDependencies": {},
   "scripts": {},
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "@8n/lang": "^0.0.2",
+    "@w5/u8": "^0.0.3",
+    "@w5/utf8": "^0.0.3",
+    "@w5/write": "^0.0.1"
+  }
 }

@@ -4,7 +4,7 @@
   "repository": "https://github.com/i18n-site/node.git",
   "homepage": "https://github.com/i18n-site/node/tree/main/i18n",
   "author": "i18n.site@gmail.com",
-  "license": "BSL1.1 ",
+  "license": "BSL1.1",
   "exports": {
     ".": "./lib/index.js",
     "./*": "./lib/*"
