@@ -33,8 +33,8 @@ dependencies:
     specifier: ^0.0.1
     version: 0.0.1
   '@w5/lang':
-    specifier: ^0.0.5
-    version: 0.0.5
+    specifier: ^0.0.6
+    version: 0.0.6
   '@w5/tran':
     specifier: ^0.0.6
     version: 0.0.6
@@ -203,8 +203,8 @@ packages:
       opencc-js: 1.0.5
     dev: false
 
-  /@w5/lang@0.0.5:
-    resolution: {integrity: sha512-Yqs0nTOQvxrEXURkFEbxMKUyxFC0dn9+kQLHsWve2JMLtQfV9xN+NaEgcJj3LqaciwoIDfURjRlitWyVnCXIig==}
+  /@w5/lang@0.0.6:
+    resolution: {integrity: sha512-y/dJ1E3l3zxPYN9/4YjI/++igSW4PfXqPY1H11Pu0aPE/5bNwsqD5/v8Wq3nemFExAhDbiv2qto8O/EQhRiiVA==}
     dev: false
 
   /@w5/md2htm@0.0.1:
