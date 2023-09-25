@@ -15,8 +15,8 @@ dependencies:
     specifier: ^0.0.9
     version: 0.0.9
   '@8n/lang':
-    specifier: ^0.0.1
-    version: 0.0.1
+    specifier: ^0.0.2
+    version: 0.0.2
   '@8n/nt':
     specifier: ^0.0.12
     version: 0.0.12
@@ -89,8 +89,8 @@ packages:
       '@w5/xxhash3-wasm': 0.0.6
     dev: false
 
-  /@8n/lang@0.0.1:
-    resolution: {integrity: sha512-bfWKea42d3YCu9+CjKALPUm4RGB2w+sTnpCAqSLjgnd9GVHq4Pdpmp6HrfCYC3sZ14nN3r0cR5L644gaSrek9w==}
+  /@8n/lang@0.0.2:
+    resolution: {integrity: sha512-6Nd7Dz8Pdj2xPDhjlpfgsBnKn4swIFfkDjHdcmPq85Zdt/fIWIzmmUGg3SMmLmSD+bILmkYIdn2jszlyz3qS5A==}
     dev: false
 
   /@8n/nt@0.0.12:
