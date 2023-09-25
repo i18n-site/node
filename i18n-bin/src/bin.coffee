@@ -8,7 +8,7 @@
   radix-64:Radia64
   fs > existsSync readFileSync
   path > join dirname basename resolve
-  @w5/lang:LANG
+  @8n/lang:LANG
 
 # {encodeInt} = radix64()
 
