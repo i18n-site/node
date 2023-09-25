@@ -14,6 +14,9 @@ dependencies:
   '@8n/is-change':
     specifier: ^0.0.9
     version: 0.0.9
+  '@8n/lang':
+    specifier: ^0.0.1
+    version: 0.0.1
   '@8n/nt':
     specifier: ^0.0.12
     version: 0.0.12
@@ -32,9 +35,6 @@ dependencies:
   '@w5/ext':
     specifier: ^0.0.1
     version: 0.0.1
-  '@w5/lang':
-    specifier: ^0.0.6
-    version: 0.0.6
   '@w5/tran':
     specifier: ^0.0.6
     version: 0.0.6
@@ -87,6 +87,10 @@ packages:
       '@w5/u8': 0.0.3
       '@w5/write': 0.0.1
       '@w5/xxhash3-wasm': 0.0.6
+    dev: false
+
+  /@8n/lang@0.0.1:
+    resolution: {integrity: sha512-bfWKea42d3YCu9+CjKALPUm4RGB2w+sTnpCAqSLjgnd9GVHq4Pdpmp6HrfCYC3sZ14nN3r0cR5L644gaSrek9w==}
     dev: false
 
   /@8n/nt@0.0.12:
@@ -201,10 +205,6 @@ packages:
     resolution: {integrity: sha512-+T2ZuGoHJavvM4rmd3z7ntRiC78x3AaqodZIJz5vgBRkQUcoq/6aosFOT7IW5ejyEwrJ8Xaw5uTAR5181eJ+pw==}
     dependencies:
       opencc-js: 1.0.5
-    dev: false
-
-  /@w5/lang@0.0.6:
-    resolution: {integrity: sha512-y/dJ1E3l3zxPYN9/4YjI/++igSW4PfXqPY1H11Pu0aPE/5bNwsqD5/v8Wq3nemFExAhDbiv2qto8O/EQhRiiVA==}
     dev: false
 
   /@w5/md2htm@0.0.1:

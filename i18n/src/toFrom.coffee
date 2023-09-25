@@ -1,6 +1,6 @@
 #!/usr/bin/env coffee
 
-> @w5/lang
+> @8n/lang
 
 < (lang_li, to)=>
   s = new Map
