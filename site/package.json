@@ -1,0 +1,24 @@
+{
+  "name": "@8n/site",
+  "version": "0.0.0",
+  "repository": "https://github.com/i18n-site/node.git",
+  "homepage": "https://github.com/i18n-site/node/tree/main/site",
+  "author": "i18n.site@gmail.com",
+  "license": "BSL1.1",
+  "exports": {
+    ".": "./lib/index.js",
+    "./*": "./lib/*"
+  },
+  "files": [
+    "lib/*"
+  ],
+  "devDependencies": {},
+  "scripts": {},
+  "type": "module",
+  "dependencies": {
+    "@8n/nt": "^0.0.12"
+  },
+  "bin": {
+    "i18n-site": "./lib/i18n-site.js"
+  }
+}
