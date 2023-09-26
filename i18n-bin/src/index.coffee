@@ -4,9 +4,14 @@
   @w5/utf8/utf8e.js
   path > join
   @w5/write
+  @8n/nt/load.js
   @w5/u8 > u8merge
+  @w5/msgpack > pack
+  fs > existsSync
 
 < (pwd, file_li, to_from)=>
+  public_dir = join pwd, 'public'
+
   lang_set = new Set
   for li from to_from
     for i from li
@@ -24,9 +29,26 @@
 
   li.pop()
   write(
-    join(pwd, 'public/lang')
+    join(public_dir, 'lang')
     u8merge ...li
   )
+
+  # 编译 nt
+  for f from file_li
+    if f.endsWith '.nt'
+      fp = join pwd, f
+      if existsSync fp
+        g = load fp
+      else
+        g = {}
+      for lang from lang_set
+        write(
+          join public_dir, lang, f.slice(0,-3)
+          pack {
+            ...g
+            ...load join pwd, lang, f
+          }
+        )
   return
 
 if process.argv[1] == decodeURI (new URL(import.meta.url)).pathname
