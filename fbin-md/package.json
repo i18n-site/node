@@ -1,8 +1,8 @@
 {
-  "name": "@8n/vite-conf",
-  "version": "0.0.0",
+  "name": "@8n/fbin-md",
+  "version": "0.0.1",
   "repository": "https://github.com/i18n-site/node.git",
-  "homepage": "https://github.com/i18n-site/node/tree/main/vite-conf",
+  "homepage": "https://github.com/i18n-site/node/tree/main/fbin-md",
   "author": "i18n.site@gmail.com",
   "license": "BSL1.1",
   "exports": {
@@ -16,7 +16,6 @@
   "scripts": {},
   "type": "module",
   "dependencies": {
-    "@w5/read": "^0.0.1",
-    "@w5/vite-conf": "^0.0.4"
+    "@w5/fetch": "^0.0.3"
   }
 }
