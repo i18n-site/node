@@ -62,8 +62,8 @@ tran = {
       from_fp = join pwd, from_rel
       to_fp = join pwd, to_rel
       from_change = isChange(from_rel)
-      bar.log from_lang, '→', to_lang
       if from_change or isChange(to_rel)
+        bar.log from_lang, '→', to_lang
         await tran[e](
           pwd
           fp
