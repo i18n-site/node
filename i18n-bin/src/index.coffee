@@ -19,8 +19,10 @@
         utf8e code
         [0]
         utf8e lang
+        [0]
       )
 
+  li.pop()
   write(
     join(pwd, 'public/lang')
     u8merge ...li
