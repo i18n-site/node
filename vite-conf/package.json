@@ -1,0 +1,21 @@
+{
+  "name": "@8n/vite-conf",
+  "version": "0.0.0",
+  "repository": "https://github.com/i18n-site/node.git",
+  "homepage": "https://github.com/i18n-site/node/tree/main/vite-conf",
+  "author": "i18n.site@gmail.com",
+  "license": "BSL1.1",
+  "exports": {
+    ".": "./lib/index.js",
+    "./*": "./lib/*"
+  },
+  "files": [
+    "lib/*"
+  ],
+  "devDependencies": {},
+  "scripts": {},
+  "type": "module",
+  "dependencies": {
+    "@w5/vite-conf": "^0.0.4"
+  }
+}
