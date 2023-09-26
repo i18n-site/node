@@ -1,8 +1,8 @@
 {
-  "name": "@8n/dist",
+  "name": "@8n/pack",
   "version": "0.0.0",
   "repository": "https://github.com/i18n-site/node.git",
-  "homepage": "https://github.com/i18n-site/node/tree/main/dist",
+  "homepage": "https://github.com/i18n-site/node/tree/main/pack",
   "author": "i18n.site@gmail.com",
   "license": "BSL1.1",
   "exports": {
@@ -14,5 +14,10 @@
   ],
   "devDependencies": {},
   "scripts": {},
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "@w5/read": "^0.0.1",
+    "@w5/xxhash3-wasm": "^0.0.6",
+    "base-x": "^4.0.0"
+  }
 }
