@@ -22,7 +22,7 @@
       )
 
   write(
-    join(pwd, '.i18n/lang')
+    join(pwd, 'public/lang')
     u8merge ...li
   )
   return
