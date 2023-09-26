@@ -1,5 +1,4 @@
-> @w5/vite-conf
-  @w5/read
+> @w5/vite-conf/sveltePreprocess.js
 
 IMPORT_onMount = 1
 IMPORT_onI18n = 2
@@ -37,16 +36,18 @@ svelte = (txt)=>
     r.push line
   return r.join('\n')
 
+sveltePreprocess.unshift(
+  markup: ({content, filename})=>
+    if filename.endsWith '.svelte'
+      return {
+        code: svelte(content)
+      }
+    return
+)
+
+> @w5/vite-conf
+  @w5/read
+
+
 < (dir)=>
-  conf = (await ViteConf(dir))()
-  conf.plugins.unshift({
-    name:'i18n-site',
-    load: (id)=>
-      if id.endsWith '.svelte'
-        r = svelte read id
-        console.log '\n\n'+id+'\n\n'
-        console.log r
-        return r
-      return
-  })
-  conf
+  (await ViteConf(dir))()

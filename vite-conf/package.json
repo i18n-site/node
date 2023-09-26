@@ -17,6 +17,6 @@
   "type": "module",
   "dependencies": {
     "@w5/read": "^0.0.1",
-    "@w5/vite-conf": "^0.0.4"
+    "@w5/vite-conf": "^0.0.5"
   }
 }
