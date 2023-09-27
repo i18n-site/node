@@ -21,8 +21,8 @@ dependencies:
     specifier: ^0.0.12
     version: 0.0.12
   '@8n/tran_md':
-    specifier: ^0.0.11
-    version: 0.0.11
+    specifier: ^0.0.12
+    version: 0.0.12
   '@8n/vbyte':
     specifier: ^0.0.2
     version: 0.0.2
@@ -78,8 +78,8 @@ packages:
       '@w5/write': 0.0.1
     dev: false
 
-  /@8n/htm2md@0.0.3:
-    resolution: {integrity: sha512-iM3fy1p2sPc3TbJreEwjiSSkuEoIDVNp4kJracpCBMLnTjBZtor+H5g8BQ3De7tvVkAhdrpwYw+/+nEeFX5GEg==}
+  /@8n/htm2md@0.0.4:
+    resolution: {integrity: sha512-QoxD6VVhKiOjxJIYzZYS/X4rKJ6YCa38dRNqhrHcIYN5ItVSCbBtCbBIcVR4jeE2fxyRnFLKcNbrHjqZJk/RPw==}
     dev: false
 
   /@8n/is-change@0.0.9:
@@ -112,11 +112,11 @@ packages:
     resolution: {integrity: sha512-J5IDWPFwkBdiOkkAVIXn94I426n2Z/mEM77eD/GscomhkBWOJQb1s5RagzjTrpTqY6Uup/sBoCsBAvgVfSbgAw==}
     dev: false
 
-  /@8n/tran_md@0.0.11:
-    resolution: {integrity: sha512-87OXfQ1s6lpNsZToWUJeuZ2NSwHbVUU5CiVQNTFG8os6tnF6SNYvftE0A06OjDQsRtX9xY03RhUGbFTNAeo5Jw==}
+  /@8n/tran_md@0.0.12:
+    resolution: {integrity: sha512-5Yaeqo09xPtpyuomYmJWkwQzJJ+QPtJu+rGp0dsVdAWKpNduSDHxEqD6yH+gdBppvZK97SoKMPCta4NEqN8g4Q==}
     dependencies:
       '@8n/cache_map': 0.0.11
-      '@8n/htm2md': 0.0.3
+      '@8n/htm2md': 0.0.4
       '@8n/replace_n': 0.0.4
       '@8n/title-case': 0.0.5
       '@w5/md2htm': 0.0.1
