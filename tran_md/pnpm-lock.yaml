@@ -9,8 +9,8 @@ dependencies:
     specifier: ^0.0.11
     version: 0.0.11
   '@8n/htm2md':
-    specifier: ^0.0.3
-    version: 0.0.3
+    specifier: ^0.0.4
+    version: 0.0.4
   '@8n/replace_n':
     specifier: ^0.0.4
     version: 0.0.4
@@ -48,8 +48,8 @@ packages:
       '@w5/write': 0.0.1
     dev: false
 
-  /@8n/htm2md@0.0.3:
-    resolution: {integrity: sha512-iM3fy1p2sPc3TbJreEwjiSSkuEoIDVNp4kJracpCBMLnTjBZtor+H5g8BQ3De7tvVkAhdrpwYw+/+nEeFX5GEg==}
+  /@8n/htm2md@0.0.4:
+    resolution: {integrity: sha512-QoxD6VVhKiOjxJIYzZYS/X4rKJ6YCa38dRNqhrHcIYN5ItVSCbBtCbBIcVR4jeE2fxyRnFLKcNbrHjqZJk/RPw==}
     dev: false
 
   /@8n/replace_n@0.0.4:
