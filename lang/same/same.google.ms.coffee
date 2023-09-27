@@ -40,6 +40,8 @@ for [code,{nativeName, name, dir}] from Object.entries lang.translation
     google_code = 'mni-Mtei'
   else if code == 'nb'
     google_code = 'no'
+  else if code == 'fil'
+    google_code = 'tl'
   else
     google_code = code
 
