@@ -17,5 +17,8 @@
     "@w5/write": "^0.0.1"
   },
   "scripts": {},
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "@w5/uridir": "^0.0.1"
+  }
 }

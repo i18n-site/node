@@ -4,6 +4,11 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+dependencies:
+  '@w5/uridir':
+    specifier: ^0.0.1
+    version: 0.0.1
+
 devDependencies:
   '@w5/tran':
     specifier: ^0.0.6
@@ -103,6 +108,10 @@ packages:
     transitivePeerDependencies:
       - supports-color
     dev: true
+
+  /@w5/uridir@0.0.1:
+    resolution: {integrity: sha512-5ZNTzgVhQHvfI1apigB10XTPjTg5KgMRxdRzda3nUrRTVvzOW1b5fVkFBwv6iqDurNJIe2jiGL97Ge1445p9/g==}
+    dev: false
 
   /@w5/write@0.0.1:
     resolution: {integrity: sha512-VyQXX2C3yRqfS7D5B+yCcsR1tvzZ1DzPLi5kugBOe/EeL+LOD3ftFamfik7wQr2TG7XQ7VF0snUpqVLaytwfOA==}
