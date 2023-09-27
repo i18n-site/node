@@ -1,6 +1,6 @@
 {
   "name": "@8n/tran_md",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "repository": "https://github.com/i18n-site/node.git",
   "homepage": "https://github.com/i18n-site/node/tree/main/tran_md",
   "author": "i18n.site@gmail.com",
@@ -19,7 +19,7 @@
   "type": "module",
   "dependencies": {
     "@8n/cache_map": "^0.0.11",
-    "@8n/htm2md": "^0.0.1",
+    "@8n/htm2md": "^0.0.2",
     "@8n/replace_n": "^0.0.4",
     "@8n/title-case": "^0.0.5",
     "@w5/md2htm": "^0.0.1",

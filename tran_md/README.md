@@ -44,5 +44,5 @@ if args.length == 2
 output :
 
 ```
-./out.txt
+use https_proxy http://127.0.0.1:7890
 ```
