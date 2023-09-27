@@ -11,5 +11,6 @@ for htm from [
   '<img src="/x.png" alt="123">'
   '<img src="/x.png" alt="123" style="width:100px">'
   '<p>需要在 ``` 之后表明语言， 比如 <code>```rust</code> 。</p>'
+  '<p>我想说，<strong>只有做了全站国际化，才能支持多语种的站内全文搜索和搜索引擎优化</strong>。</p>'
 ]
   console.log htm2md htm

@@ -2,6 +2,15 @@ htm2md = (txt)=>
   txt.replace(
     /([^\\])```/g,'$1\\```'
   ).replace(
+    /<strong>(.*?)<\/strong>/g,
+    "**$1**"
+  ).replace(
+    /<em>(.*?)<\/em>/g,
+    "*$1*"
+  ).replace(
+    /<del>(.*?)<\/del>/g,
+    "~~$1~~"
+  ).replace(
     /<code>(.*?)<\/code>/g, (_, s)=>
       s = s.replaceAll('\\```','```')
       if s.startsWith '```'
