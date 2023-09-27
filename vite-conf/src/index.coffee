@@ -4,9 +4,11 @@
 
 < (dir)=>
   conf = (await ViteConf(dir))()
-  conf.resolve.alias['@8n/fbin-md'] = join(
-    dir
-    'node_modules/@8n/fbin-md'
-  )
-  console.log conf
+  for p from [
+    '@8p/i18n'
+  ]
+    conf.resolve.alias[p] = join(
+      dir,'node_modules',p
+    )
+  console.log conf.resolve
   conf
