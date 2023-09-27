@@ -1,7 +1,7 @@
 > marked > marked
 
 # https://marked.js.org/using_pro
-renderer = {
+export renderer = {
   link:(href, title, text)=>
     r = """<a href="#{href}" target=_blank"""
     if title
