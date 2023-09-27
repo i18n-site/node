@@ -3,7 +3,7 @@
   ./pick.js
   ./psfix.js
   ./tranComment.js
-  @w5/htm2md
+  @8n/htm2md
   @w5/md2htm
   @w5/tran > tranHtm
   @w5/utf8/utf8d.js

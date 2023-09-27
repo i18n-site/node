@@ -11,6 +11,9 @@ dependencies:
   '@8n/cache_map':
     specifier: ^0.0.11
     version: 0.0.11
+  '@8n/htm2md':
+    specifier: ^0.0.1
+    version: 0.0.1
   '@8n/is-change':
     specifier: ^0.0.9
     version: 0.0.9
@@ -76,6 +79,10 @@ packages:
       '@w5/binmap': 0.0.5
       '@w5/utf8': 0.0.3
       '@w5/write': 0.0.1
+    dev: false
+
+  /@8n/htm2md@0.0.1:
+    resolution: {integrity: sha512-dJo6sDIe6/FYDJ4+f8keIG3Mvg+pjDKucrhk/JMuj/9YTp0c/NbLlFp7MVaW5PxHCPwCTu4xM9l/moOyIVS7vA==}
     dev: false
 
   /@8n/is-change@0.0.9:
