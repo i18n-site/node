@@ -1,10 +1,15 @@
 htm2md = (txt)=>
   txt.replace(
+    /([^\\])```/g,'$1\\```'
+  ).replace(
     /<code>(.*?)<\/code>/g, (_, s)=>
-      '`'+s.replaceAll('```','\\```')+'`'
+      s = s.replaceAll('\\```','```')
+      if s.startsWith '```'
+        s = ' '+s
+      '`'+s+'`'
   ).replace(
     /<a href="([^"]+)">([^<]+)<\/a>/g, '[$2]($1)'
-  ).replaceAll /([^\\])```/g,'$1\\```'
+  )
 
 < (htm)=>
   p = htm.indexOf('>')
