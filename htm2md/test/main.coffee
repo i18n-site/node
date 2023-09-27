@@ -1,0 +1,14 @@
+#!/usr/bin/env coffee
+
+> @8n/htm2md
+
+for htm from [
+  '<h1>I18N.SITE · 文档无国界 <img src="//ok0.pw/5l" style="width:42px;float:right;margin-top:6px"></h1>'
+  '<p>test&gt;</p>'
+  '<p>test&gt;<a href="#">b</a></p>'
+  '<p>修改译文后需要重新运行 <code>./i18n.sh</code> 更新缓存。</p>'
+  '<p>修改译文后需要重新运行 <a href="/">./i18n.sh</a> 更新缓存。</p>'
+  '<img src="/x.png" alt="123">'
+  '<img src="/x.png" alt="123" style="width:100px">'
+]
+  console.log htm2md htm

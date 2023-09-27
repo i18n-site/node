@@ -1,0 +1,17 @@
+{
+  "name": "@8n/htm2md",
+  "version": "0.0.1",
+  "repository": "https://github.com/i18n-site/node.git",
+  "homepage": "https://github.com/i18n-site/node/tree/main/htm2md",
+  "author": "i18n.site@gmail.com",
+  "license": "BSL1.1",
+  "exports": {
+    ".": "./lib/index.js",
+    "./*": "./lib/*"
+  },
+  "files": [
+    "lib/*"
+  ],
+  "scripts": {},
+  "type": "module"
+}
