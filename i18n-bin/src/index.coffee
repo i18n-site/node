@@ -3,6 +3,7 @@
 > @8n/lang:LANG
   @w5/utf8/utf8e.js
   path > join
+  lodash-es/merge
   @w5/write
   @8n/nt/load.js
   @w5/u8 > u8merge
@@ -44,10 +45,10 @@
       for lang from lang_set
         write(
           join public_dir, lang, f.slice(0,-3)
-          pack {
-            ...g
-            ...load join pwd, lang, f
-          }
+          pack merge(
+            g
+            load join pwd, lang, f
+          )
         )
   return
 

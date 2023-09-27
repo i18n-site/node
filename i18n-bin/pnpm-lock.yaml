@@ -23,6 +23,9 @@ dependencies:
   '@w5/write':
     specifier: ^0.0.1
     version: 0.0.1
+  lodash-es:
+    specifier: ^4.17.21
+    version: 4.17.21
 
 packages:
 
@@ -105,6 +108,10 @@ packages:
 
   /@w5/write@0.0.1:
     resolution: {integrity: sha512-VyQXX2C3yRqfS7D5B+yCcsR1tvzZ1DzPLi5kugBOe/EeL+LOD3ftFamfik7wQr2TG7XQ7VF0snUpqVLaytwfOA==}
+    dev: false
+
+  /lodash-es@4.17.21:
+    resolution: {integrity: sha512-mKnC+QJ9pWVzv+C4/U3rRsHapFfHvQFoFB92e52xeyGMcX6/OlIl78je1u8vePzYZSkkogMPJ2yjxxsb89cxyw==}
     dev: false
 
   /msgpackr-extract@3.0.2:
