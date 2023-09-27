@@ -11,9 +11,6 @@ dependencies:
   '@8n/cache_map':
     specifier: ^0.0.11
     version: 0.0.11
-  '@8n/htm2md':
-    specifier: ^0.0.1
-    version: 0.0.1
   '@8n/is-change':
     specifier: ^0.0.9
     version: 0.0.9
@@ -24,8 +21,8 @@ dependencies:
     specifier: ^0.0.12
     version: 0.0.12
   '@8n/tran_md':
-    specifier: ^0.0.8
-    version: 0.0.8
+    specifier: ^0.0.9
+    version: 0.0.9
   '@8n/vbyte':
     specifier: ^0.0.2
     version: 0.0.2
@@ -115,13 +112,13 @@ packages:
     resolution: {integrity: sha512-J5IDWPFwkBdiOkkAVIXn94I426n2Z/mEM77eD/GscomhkBWOJQb1s5RagzjTrpTqY6Uup/sBoCsBAvgVfSbgAw==}
     dev: false
 
-  /@8n/tran_md@0.0.8:
-    resolution: {integrity: sha512-uZZiTPygWZFyr+sB6TK/D6bQe/JAc6VA+0qM0ywPoTtx4BWC5aJGb80YJuVxXgc2Uwe8QdhuLDK9ltlAVaB7BA==}
+  /@8n/tran_md@0.0.9:
+    resolution: {integrity: sha512-iAka3ZuoysTcC02GrcfcJmhJ0hdfFaZERR/SZ00lgTin/tvmBXVovQZU/Mi9xcHl19Atr1k+YlDdN05IdB0hpQ==}
     dependencies:
       '@8n/cache_map': 0.0.11
+      '@8n/htm2md': 0.0.1
       '@8n/replace_n': 0.0.4
       '@8n/title-case': 0.0.5
-      '@w5/htm2md': 0.0.1
       '@w5/md2htm': 0.0.1
       '@w5/read': 0.0.1
       '@w5/tran': 0.0.6
@@ -200,12 +197,6 @@ packages:
 
   /@w5/ext@0.0.1:
     resolution: {integrity: sha512-YGvCijduW1evQh0Km3GyGSlbrSxlmTuhBzwgEM0aSu8Q8XgGYvMrX98pV1Mt1SYC0pkh+Z6VROavL67WvSzsnA==}
-    dev: false
-
-  /@w5/htm2md@0.0.1:
-    resolution: {integrity: sha512-yqPrKLWHXo5I8Mz0YUObc/N4EX5UnaWQ5BKIaWzOlrW9ZgR257OMdKu19jP5dppmbQ30TdZa2M79VYfwDgPk+Q==}
-    dependencies:
-      turndown: 7.1.2
     dev: false
 
   /@w5/j2f@0.0.1:
@@ -433,10 +424,6 @@ packages:
     resolution: {integrity: sha512-pGjwhsmsp4kL2RTz08wcOlGN83otlqHeD/Z5T8GXZB+/YcpQ/dgo+lbU8ZsGxV0HIvqqxo9l7mqYwyYMD9bKDg==}
     engines: {node: '>=0.10'}
     hasBin: true
-    dev: false
-
-  /domino@2.1.6:
-    resolution: {integrity: sha512-3VdM/SXBZX2omc9JF9nOPCtDaYQ67BGp5CoLpIQlO2KCAPETs8TcDHacF26jXadGbvUteZzRTeos2fhID5+ucQ==}
     dev: false
 
   /emoji-regex@8.0.0:
@@ -837,12 +824,6 @@ packages:
     resolution: {integrity: sha512-McnNiV1l8RYeY8tBgEpuodCC1mLUdbSN+CYBL7kJsJNInOP8UjDDEwdk6Mw60vdLLrr5NHKZhMAOSrR2NZuQ+w==}
     dependencies:
       safe-buffer: 5.2.1
-    dev: false
-
-  /turndown@7.1.2:
-    resolution: {integrity: sha512-ntI9R7fcUKjqBP6QU8rBK2Ehyt8LAzt3UBT9JR9tgo6GtuKvyUzpayWmeMKJw1DPdXzktvtIT8m2mVXz+bL/Qg==}
-    dependencies:
-      domino: 2.1.6
     dev: false
 
   /util-deprecate@1.0.2:

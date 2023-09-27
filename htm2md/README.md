@@ -17,6 +17,7 @@ for htm from [
   '<p>修改译文后需要重新运行 <a href="/">./i18n.sh</a> 更新缓存。</p>'
   '<img src="/x.png" alt="123">'
   '<img src="/x.png" alt="123" style="width:100px">'
+  '<p>需要在 ``` 之后表明语言， 比如 <code>```rust</code> 。</p>'
 ]
   console.log htm2md htm
 ```
@@ -31,4 +32,5 @@ test&gt;[b](#)
 修改译文后需要重新运行 [./i18n.sh](/) 更新缓存。
 ![123](/x.png)
 <img src="/x.png" alt="123" style="width:100px">
+需要在 \``` 之后表明语言， 比如 `\```rust` 。
 ```
