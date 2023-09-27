@@ -13,7 +13,7 @@
     "lib/*"
   ],
   "devDependencies": {
-    "@w5/tran": "^0.0.4",
+    "@w5/tran": "^0.0.6",
     "@w5/write": "^0.0.1"
   },
   "scripts": {},
