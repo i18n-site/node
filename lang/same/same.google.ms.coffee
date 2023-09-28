@@ -2,7 +2,9 @@
 
 > @w5/read
   @w5/uridir
+  @w5/write
   path > join dirname
+  json5
 
 ROOT = dirname uridir import.meta
 
@@ -22,7 +24,8 @@ lang = JSON.parse read join(
 )
 
 
-google2ms = {}
+google_ms = {}
+google_same_ms = new Set
 rtl = new Set
 miss_in_google = new Map
 for [code,{nativeName, name, dir}] from Object.entries lang.translation
@@ -57,16 +60,36 @@ for [code,{nativeName, name, dir}] from Object.entries lang.translation
     else
       google_code = code
 
-  console.log code, nativeName, name
+  # console.log code, nativeName, name
   if code2cn.has google_code
-    google2ms[code] = google_code
+    if code == google_code
+      google_same_ms.add code
+    else
+      google_ms[google_code] = code
     if dir == 'rtl'
       rtl.add google_code
     code2cn.delete google_code
   else
     miss_in_google.set code,name
 
-console.log rtl
-console.log code2cn
-console.log miss_in_google
-console.log Object.keys(google2ms).length
+write(
+  join ROOT,'src/googleMS.coffee'
+  [
+    '< GOOGLE_MS_SAME = new Set(\''+[...google_same_ms].join(' ')+'\'.split(\' \'))'
+    '< GOOGLE_MS = '+json5.stringify(google_ms)
+    '''
+< (code)=>
+  if GOOGLE_MS_SAME.has code
+    return code
+  return GOOGLE_MS[code]
+    '''
+  ].join '\n'
+)
+write(
+  join ROOT,'src/rtl.coffee'
+  'export default new Set(\''+[...rtl].join(' ')+'\'.split(\' \'))'
+)
+# console.log rtl
+# console.log code2cn
+# console.log miss_in_google
+# console.log Object.keys(google2ms).length
