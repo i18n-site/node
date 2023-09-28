@@ -26,11 +26,13 @@ lang = JSON.parse read join(
 
 google_ms = {}
 google_same_ms = new Set
+code_en_li = []
+code_native_li = []
 rtl = new Set
 miss_in_google = new Map
 for [code,{nativeName, name, dir}] from Object.entries lang.translation
   # console.log code, nativeName, dir
-  if nativeName.includes '繁體中文'
+  if nativeName.includes '中文 (简体)'
     nativeName = '简体中文'
   else if nativeName.includes '繁體中文'
     nativeName = '正體中文'
@@ -60,12 +62,14 @@ for [code,{nativeName, name, dir}] from Object.entries lang.translation
     else
       google_code = code
 
-  # console.log code, nativeName, name
   if code2cn.has google_code
+    console.log code, nativeName, name
     if code == google_code
       google_same_ms.add code
     else
       google_ms[google_code] = code
+    code_en_li.push [google_code, name]
+    code_native_li.push [google_code, nativeName]
     if dir == 'rtl'
       rtl.add google_code
     code2cn.delete google_code
@@ -86,8 +90,16 @@ write(
   ].join '\n'
 )
 write(
-  join ROOT,'src/rtl.coffee'
+  join ROOT,'src/rtl.js'
   'export default new Set(\''+[...rtl].join(' ')+'\'.split(\' \'))'
+)
+write(
+  join ROOT,'src/en.js'
+  'export default '+JSON.stringify code_en_li
+)
+write(
+  join ROOT,'src/index.js'
+  'export default '+JSON.stringify code_native_li
 )
 # console.log rtl
 # console.log code2cn
