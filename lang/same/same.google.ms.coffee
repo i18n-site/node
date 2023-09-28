@@ -93,14 +93,42 @@ write(
   join ROOT,'src/rtl.js'
   'export default new Set(\''+[...rtl].join(' ')+'\'.split(\' \'))'
 )
-write(
-  join ROOT,'src/en.js'
-  'export default '+JSON.stringify code_en_li
-)
-write(
-  join ROOT,'src/index.js'
-  'export default '+JSON.stringify code_native_li
-)
+dump = (name, li)=>
+  write(
+    join ROOT,'src',name+'.js'
+    'export default '+JSON.stringify li,null,2
+  )
+
+estimated_ranking = [
+  'en', 'zh', 'es', 'ar', 'pt', 'fr', 'ru', 'ja', 'de', 'id',
+  'ko', 'vi', 'it', 'tr', 'fa', 'th', 'pl', 'nl', 'uk', 'ro',
+  'el', 'cs', 'sv', 'hu', 'fi', 'da', 'no', 'he', 'bg', 'sk',
+  'sr', 'lt', 'lv', 'et', 'hr', 'sl', 'mk', 'ms', 'hi', 'bn',
+  'ur', 'sw', 'ml', 'te', 'ta', 'mr', 'pa', 'gu', 'kn', 'or',
+  'my', 'ne', 'si', 'km', 'lo', 'hy', 'az', 'uz', 'kk', 'ky',
+  'ka', 'tg', 'tk', 'ps', 'sd', 'am', 'ha', 'ig', 'yo', 'sn',
+  'so', 'mg', 'st', 'rw', 'ln', 'xh', 'zu', 'af', 'cy', 'mt',
+  'ga', 'gl', 'eu', 'is', 'bs', 'sq', 'lv', 'ht', 'sm', 'mi',
+  'hmn', 'ti', 'dv', 'gom', 'mai', 'ckb', 'ku', 'tt', 'ug'
+]
+dump 'en',code_en_li
+
+code_native_li.sort (a,b)=>
+  p = estimated_ranking.indexOf(a[0])
+  if p < 0
+    p = 999
+  p2 = estimated_ranking.indexOf(b[0])
+  if p2 < 0
+    p2 = 999
+  if p == p2
+    if a[0] > b[0]
+      return 1
+    else
+      return -1
+  p - p2
+
+dump 'index',code_native_li
+
 # console.log rtl
 # console.log code2cn
 # console.log miss_in_google
