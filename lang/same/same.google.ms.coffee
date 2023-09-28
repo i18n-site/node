@@ -38,12 +38,16 @@ for [code,{nativeName, name, dir}] from Object.entries lang.translation
       google_code = 'zh-TW'
     when 'mn-Cyrl'
       google_code = 'mn'
-    when 'mni'
-      google_code = 'mni-Mtei'
+    # when 'mni'
+    #   google_code = 'mni-Mtei'
     when 'nb'
       google_code = 'no'
     when 'fil'
       google_code = 'tl'
+    when 'ku'
+      google_code = 'ckb'
+    when 'kmr'
+      google_code = 'ku'
     when 'sr-Cyrl'
       google_code = 'sr'
     when 'mww'
@@ -53,16 +57,16 @@ for [code,{nativeName, name, dir}] from Object.entries lang.translation
     else
       google_code = code
 
+  console.log code, nativeName, name
   if code2cn.has google_code
     google2ms[code] = google_code
     if dir == 'rtl'
       rtl.add google_code
     code2cn.delete google_code
   else
-    console.log code, nativeName, name
     miss_in_google.set code,name
 
 console.log rtl
-console.log Object.keys(google2ms).length
 console.log code2cn
 console.log miss_in_google
+console.log Object.keys(google2ms).length
