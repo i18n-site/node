@@ -24,28 +24,34 @@ lang = JSON.parse read join(
 
 google2ms = {}
 rtl = new Set
+miss_in_google = new Map
 for [code,{nativeName, name, dir}] from Object.entries lang.translation
   # console.log code, nativeName, dir
   if nativeName.includes '繁體中文'
     nativeName = '简体中文'
   else if nativeName.includes '繁體中文'
     nativeName = '正體中文'
-  if code == 'zh-Hans'
-    google_code = 'zh'
-  else if code == 'zh-Hant'
-    google_code = 'zh-TW'
-  else if code == 'mn-Cyrl'
-    google_code = 'mn'
-  else if code == 'mni'
-    google_code = 'mni-Mtei'
-  else if code == 'nb'
-    google_code = 'no'
-  else if code == 'fil'
-    google_code = 'tl'
-  else if code == 'sr-Cyrl'
-    google_code = 'sr'
-  else
-    google_code = code
+  switch code
+    when 'zh-Hans'
+      google_code = 'zh'
+    when 'zh-Hant'
+      google_code = 'zh-TW'
+    when 'mn-Cyrl'
+      google_code = 'mn'
+    when 'mni'
+      google_code = 'mni-Mtei'
+    when 'nb'
+      google_code = 'no'
+    when 'fil'
+      google_code = 'tl'
+    when 'sr-Cyrl'
+      google_code = 'sr'
+    when 'mww'
+      google_code = 'hmn'
+    when 'he'
+      google_code = 'iw'
+    else
+      google_code = code
 
   if code2cn.has google_code
     google2ms[code] = google_code
@@ -54,7 +60,9 @@ for [code,{nativeName, name, dir}] from Object.entries lang.translation
     code2cn.delete google_code
   else
     console.log code, nativeName, name
+    miss_in_google.set code,name
 
 console.log rtl
-console.log code2cn
 console.log Object.keys(google2ms).length
+console.log code2cn
+console.log miss_in_google
