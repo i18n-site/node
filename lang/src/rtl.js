@@ -1,0 +1,1 @@
+export default new Set('ar dv fa iw ckb ps ug ur'.split(' '))
