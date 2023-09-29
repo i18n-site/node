@@ -1,5 +1,5 @@
 > uWebSockets
-  @w5/msgpack > pack unpack
+  @w5/msgpack > pack
 
 {
   PORT
@@ -58,11 +58,13 @@ bind = (ws, name, f)=>
             if body.length > 0
               if content_type.endsWith '/json'
                 body = JSON.parse body
-              else if content_type == 'm'
-                body = unpack body
+                if Array.isArray body
+                  r = await f.apply opt, body
+                else
+                  r = await f.call opt, body
             else
               body = undefined
-            r = await f.call opt, body
+              r = await f.call opt
           else
             r = await f.call opt
         if r instanceof Function
