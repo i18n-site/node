@@ -4,7 +4,6 @@
 
 console.log srv {
   test: ()->
-    console.log @getMethod()
-    console.log @getUrl()
+    console.log @
     return ['12测']
 }

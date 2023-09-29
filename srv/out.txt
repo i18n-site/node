@@ -1,8 +1,4 @@
-❯ test
+/ test
 http://127.0.0.1:3223
 uWS.App {}
-{
-  data: ArrayBuffer { [Uint8Contents]: <>, byteLength: 0 },
-  isLast: true
-}
->>
+{ method: 'post', url: '/test' }

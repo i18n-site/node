@@ -24,29 +24,37 @@ this 就是 req
 OK = '200'
 
 bind = (ws, name, f)=>
-  console.log '❯',name
+  console.log '/',name
   ws.any(
     '/'+name
     (res, req)=>
+      method = req.getMethod()
       url = req.getUrl()
       res.onAborted =>
         res.aborted = true
         return
 
-      method = req.getMethod()
-      if method == 'post'
-        await new Promise (resolve)=>
-          res.onData(
-            (data, isLast) =>
-              console.log({data, isLast})
-              if isLast
-                resolve()
-              return
-          )
-          return
-      console.log '>>'
+      switch method
+        when 'post'
+          await new Promise (resolve)=>
+            res.onData(
+              (buf, isLast) =>
+                if buf.byteLength > 0
+                  console.log Buffer.from(buf)
+                if isLast
+                  resolve()
+                return
+            )
+            return
+
       try
-        r = await f.call req
+        r = await f.apply(
+          {
+            method
+            url
+          }
+          []
+        )
         if r instanceof Function
           await r res
         else
