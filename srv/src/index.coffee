@@ -59,10 +59,11 @@ bind = (ws, name, f)=>
             if body.length > 0
               if content_type.endsWith '/json'
                 body = JSON.parse body
-                r = await f.call ...body
               else if content_type == 'm'
                 body = unpack body
-              res.body = body
+            else
+              body = undefined
+            r = await f.call opt, body
           else
             r = await f.call opt
         if r instanceof Function
