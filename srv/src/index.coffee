@@ -1,6 +1,7 @@
 > uWebSockets
   @w5/msgpack > pack
   ./br.js
+  tough-cookie > Cookie
 
 {
   PORT
@@ -9,16 +10,21 @@
 < OK = '200'
 < PORT = +PORT
 
-bind = (ws, middleware, name, f)=>
+bind = (before, after, ws, name, func)=>
   console.log '/'+name
   ws.any(
     '/'+name
     (res, req)=>
       method = req.getMethod()
+      console.log method, name
       url = req.getUrl()
       content_type = req.getHeader('content-type')
       cookie = req.getHeader('cookie')
-      accept_encoding = req.getHeader('accept-encoding').split(',').map((i)=>i.trim())
+      if cookie
+        cookie = Cookie.parse cookie
+      accept_encoding = req.getHeader(
+        'accept-encoding'
+      ).split(',').map((i)=>i.trim())
 
       opt = {
         content_type
@@ -31,9 +37,6 @@ bind = (ws, middleware, name, f)=>
       res.onAborted =>
         res.aborted = true
         return
-
-      for f from middleware
-        await f.call opt, res
 
       try
         switch method
@@ -51,19 +54,23 @@ bind = (ws, middleware, name, f)=>
                   return
               )
               return
-            if body.length > 0
-              if content_type.endsWith '/json'
-                body = JSON.parse body
-                if Array.isArray body
-                  r = await f.apply opt, body
-                else
-                  r = await f.call opt, body
-              else
-                r = await f.call opt, body
+
+        for f from before
+          if await f.call opt, res
+            return
+
+        if body and body.length > 0
+          if content_type.endsWith '/json'
+            body = JSON.parse body
+            if Array.isArray body
+              r = await func.apply opt, body
             else
-              r = await f.call opt
+              r = await func.call opt, body
           else
-            r = await f.call opt
+            r = await func.call opt, body
+        else
+          r = await func.call opt
+
         if r instanceof Function
           await r res
         else
@@ -81,6 +88,12 @@ bind = (ws, middleware, name, f)=>
           url
           err
         )
+
+      for f from after
+        if await f.call opt, res
+          return
+
+
       br(
         res
         status
@@ -92,18 +105,16 @@ bind = (ws, middleware, name, f)=>
   )
   return
 
-< (middleware, route)=>
+< (before, after, route)=>
   ws = uWebSockets.App({})
 
   for [name,f] from Object.entries(route)
-    bind(ws, middleware, name, f)
+    bind(before, after, ws, name, f)
 
   ws.any(
     '/*'
     (res, req) =>
       # https://unetworking.github.io/uWebSockets.js/generated/interfaces/HttpRequest.html#getMethod
-      # console.log req.getMethod()
-      # console.log req.getUrl()
       res.writeStatus('404').end('')
       return
   ).listen(
