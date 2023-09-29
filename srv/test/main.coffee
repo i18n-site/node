@@ -6,5 +6,6 @@ console.log srv {
   test: ()->
     console.log @getMethod()
     console.log @getUrl()
+    throw new Error '测试'
     return ['12测']
 }

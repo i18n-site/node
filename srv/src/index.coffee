@@ -44,8 +44,8 @@ bind = (ws, name, f)=>
           ''+err
         )
         console.error(
-          res.getMethod()
-          res.getUrl()
+          req.getMethod()
+          req.getUrl()
           err
         )
         return
