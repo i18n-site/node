@@ -1,5 +1,5 @@
 > uWebSockets
-  @w5/msgpack > pack
+  @w5/msgpack > pack unpack
 
 {
   PORT
@@ -24,37 +24,47 @@ this 就是 req
 OK = '200'
 
 bind = (ws, name, f)=>
-  console.log '/',name
+  console.log '/'+name
   ws.any(
     '/'+name
     (res, req)=>
       method = req.getMethod()
       url = req.getUrl()
+      content_type = req.getHeader('content-type')
+      opt = {
+        content_type
+        method
+        url
+      }
+
+      console.log opt
       res.onAborted =>
         res.aborted = true
         return
 
-      switch method
-        when 'post'
-          await new Promise (resolve)=>
-            res.onData(
-              (buf, isLast) =>
-                if buf.byteLength > 0
-                  console.log Buffer.from(buf)
-                if isLast
-                  resolve()
-                return
-            )
-            return
-
       try
-        r = await f.apply(
-          {
-            method
-            url
-          }
-          []
-        )
+        switch method
+          when 'post'
+            body = await new Promise (resolve)=>
+              li = []
+              res.onData(
+                (buf, isLast) =>
+                  if buf.byteLength > 0
+                    li.push Buffer.from(buf)
+                  if isLast
+                    resolve Buffer.concat li
+                  return
+              )
+              return
+            if body.length > 0
+              if content_type.endsWith '/json'
+                body = JSON.parse body
+                r = await f.call ...body
+              else if content_type == 'm'
+                body = unpack body
+              res.body = body
+          else
+            r = await f.call opt
         if r instanceof Function
           await r res
         else
@@ -94,7 +104,7 @@ bind = (ws, name, f)=>
   ).listen(
     +PORT
     =>
-      console.log 'http://127.0.0.1:'+PORT
+      console.log '→ http://127.0.0.1:'+PORT
       return
   )
 
