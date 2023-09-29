@@ -51,7 +51,9 @@ bind = (ws, name, f)=>
                   if buf.byteLength > 0
                     li.push Buffer.from(buf)
                   if isLast
-                    resolve Buffer.concat li
+                    if li.length > 0
+                      li = Buffer.concat li
+                    resolve li
                   return
               )
               return
