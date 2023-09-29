@@ -8,3 +8,17 @@ uWS.App {}
   url: '/test'
 }
 body { abc: 123 }
+{
+  content_type: 'application/json',
+  accept_encoding: [ 'gzip', 'deflate', 'br' ],
+  method: 'post',
+  url: '/test'
+}
+body { abc: 123 }
+{
+  content_type: 'application/json',
+  accept_encoding: [ 'gzip', 'deflate', 'br' ],
+  method: 'post',
+  url: '/test'
+}
+body { abc: 123 }
