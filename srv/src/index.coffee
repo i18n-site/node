@@ -21,6 +21,7 @@ bind = (ws, name, f)=>
 
       opt = {
         content_type
+        accept_encoding
         method
         url
       }
@@ -76,7 +77,9 @@ bind = (ws, name, f)=>
         )
       if not res.aborted
         br(
-          res.writeStatus(status)
+          res
+          status
+          accept_encoding
           r
         )
       return
