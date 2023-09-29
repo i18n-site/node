@@ -1,24 +1,3 @@
 /test
 → http://127.0.0.1:3223
 uWS.App {}
-{
-  content_type: 'application/json',
-  accept_encoding: [ 'gzip', 'deflate', 'br' ],
-  method: 'post',
-  url: '/test'
-}
-body { abc: 123 }
-{
-  content_type: 'application/json',
-  accept_encoding: [ 'gzip', 'deflate', 'br' ],
-  method: 'post',
-  url: '/test'
-}
-body { abc: 123 }
-{
-  content_type: 'application/json',
-  accept_encoding: [ 'gzip', 'deflate', 'br' ],
-  method: 'post',
-  url: '/test'
-}
-body { abc: 123 }
