@@ -9,7 +9,7 @@
 < OK = '200'
 < PORT = +PORT
 
-bind = (ws, name, f)=>
+bind = (ws, middleware, name, f)=>
   console.log '/'+name
   ws.any(
     '/'+name
@@ -17,7 +17,7 @@ bind = (ws, name, f)=>
       method = req.getMethod()
       url = req.getUrl()
       content_type = req.getHeader('content-type')
-      i = req.getHeader('i')
+      cookie = req.getHeader('cookie')
       accept_encoding = req.getHeader('accept-encoding').split(',').map((i)=>i.trim())
 
       opt = {
@@ -25,11 +25,15 @@ bind = (ws, name, f)=>
         accept_encoding
         method
         url
+        cookie
       }
 
       res.onAborted =>
         res.aborted = true
         return
+
+      for f from middleware
+        await f.call opt, res
 
       try
         switch method
@@ -88,11 +92,11 @@ bind = (ws, name, f)=>
   )
   return
 
-< (route)=>
+< (middleware, route)=>
   ws = uWebSockets.App({})
 
   for [name,f] from Object.entries(route)
-    bind(ws, name, f)
+    bind(ws, middleware, name, f)
 
   ws.any(
     '/*'
