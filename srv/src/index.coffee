@@ -17,6 +17,7 @@ bind = (ws, name, f)=>
       method = req.getMethod()
       url = req.getUrl()
       content_type = req.getHeader('content-type')
+      i = req.getHeader('i')
       accept_encoding = req.getHeader('accept-encoding').split(',').map((i)=>i.trim())
 
       opt = {
