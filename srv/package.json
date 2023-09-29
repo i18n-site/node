@@ -17,6 +17,7 @@
   "type": "module",
   "trustedDependencies": ["uWebSockets"],
   "dependencies": {
+    "@w5/msgpack": "^0.0.2",
     "uWebSockets": "github:uNetworking/uWebSockets.js#v20.32.0"
   }
 }

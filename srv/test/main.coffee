@@ -3,7 +3,8 @@
 > @8n/srv
 
 console.log srv {
-  get: {
-
-  }
+  test: ()->
+    console.log @getMethod()
+    console.log @getUrl()
+    return ['12测']
 }

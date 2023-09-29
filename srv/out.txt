@@ -1,2 +1,7 @@
+❯ test
 http://127.0.0.1:3223
 uWS.App {}
+get
+/test
+get
+/test

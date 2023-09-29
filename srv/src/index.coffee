@@ -1,5 +1,5 @@
-
 > uWebSockets
+  @w5/msgpack > pack
 
 {
   PORT
@@ -21,13 +21,50 @@ this 就是 req
 #   r(res)
 # else
 
-< (url)=>
-  uWebSockets.App({}).any(
+OK = '200'
+
+bind = (ws, name, f)=>
+  console.log '❯',name
+  ws.any(
+    '/'+name
+    (res, req)=>
+      try
+        r = await f.call req
+        if r instanceof Function
+          await r res
+        else
+          if r == undefined
+            r = ''
+          else
+            r = pack r
+          res.writeStatus(OK).end(r)
+        return
+      catch err
+        res.writeStatus('500').end(
+          ''+err
+        )
+        console.error(
+          res.getMethod()
+          res.getUrl()
+          err
+        )
+        return
+      return
+  )
+  return
+
+< (route)=>
+  ws = uWebSockets.App({})
+
+  for [name,f] from Object.entries(route)
+    bind(ws, name, f)
+
+  ws.any(
     '/*'
     (res, req) =>
       # https://unetworking.github.io/uWebSockets.js/generated/interfaces/HttpRequest.html#getMethod
-      console.log req.getMethod()
-      console.log req.getUrl()
+      # console.log req.getMethod()
+      # console.log req.getUrl()
       res.writeStatus('404').end('')
       return
   ).listen(
