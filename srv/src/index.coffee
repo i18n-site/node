@@ -67,6 +67,7 @@ bind = (ws, name, f)=>
             r = ''
           else
             r = pack r
+            res_content_type = 'm'
         status = OK
       catch err
         status = '500'
@@ -81,6 +82,7 @@ bind = (ws, name, f)=>
           res
           status
           accept_encoding
+          res_content_type
           r
         )
       return

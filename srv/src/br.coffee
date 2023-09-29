@@ -3,17 +3,21 @@
 
 brCompress = promisify(brotliCompress)
 
-< (res, status, accept_encoding, bin)=>
+< (res, status, accept_encoding, content_type, bin)=>
   {length} = bin
   if bin.length > 256
     if accept_encoding.includes 'br'
       br = await brCompress bin
       if (20+br.length) < length # 因为 Content-Encoding: br 是 20 字节
-        res.cork =>
-          res.writeStatus(status).writeHeader(
-            'Content-Encoding', 'br'
-          ).end br
-          return
-        return
-  res.writeStatus(status).end bin
+        content_encoding = 'br'
+        bin = br
+
+  res.cork =>
+    res.writeStatus(status)
+    if content_type
+      res.writeHeader 'Content-Type', content_type
+    if content_encoding
+      res.writeHeader 'Content-Encoding', content_encoding
+    res.end br
+    return
   return
