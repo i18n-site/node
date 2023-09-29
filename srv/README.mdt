@@ -1,6 +1,10 @@
 # @8n/srv
 
-返回值如果不是 undefined ，会被 msgpack pack
+返回值
+
+    如果函数，会被传入 res ，可以 res.writeStatus(status).end(r)
+
+    如果不是 undefined ，会被 msgpack pack
 
 post,put
 

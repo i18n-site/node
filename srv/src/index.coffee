@@ -1,11 +1,13 @@
 > uWebSockets
   @w5/msgpack > pack
+  ./br.js
 
 {
   PORT
 } = process.env
 
-OK = '200'
+< OK = '200'
+< PORT = +PORT
 
 bind = (ws, name, f)=>
   console.log '/'+name
@@ -15,6 +17,8 @@ bind = (ws, name, f)=>
       method = req.getMethod()
       url = req.getUrl()
       content_type = req.getHeader('content-type')
+      accept_encoding = req.getHeader('accept-encoding').split(',').map((i)=>i.trim())
+
       opt = {
         content_type
         method
@@ -71,7 +75,10 @@ bind = (ws, name, f)=>
           err
         )
       if not res.aborted
-        res.writeStatus(status).end(r)
+        br(
+          res.writeStatus(status)
+          r
+        )
       return
   )
   return
@@ -91,7 +98,7 @@ bind = (ws, name, f)=>
       res.writeStatus('404').end('')
       return
   ).listen(
-    +PORT
+    PORT
     =>
       console.log '→ http://127.0.0.1:'+PORT
       return
