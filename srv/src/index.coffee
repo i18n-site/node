@@ -62,6 +62,8 @@ bind = (ws, name, f)=>
                   r = await f.apply opt, body
                 else
                   r = await f.call opt, body
+              else
+                r = await f.call opt, body
             else
               body = undefined
               r = await f.call opt
