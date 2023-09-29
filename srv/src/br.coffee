@@ -12,12 +12,13 @@ brCompress = promisify(brotliCompress)
         content_encoding = 'br'
         bin = br
 
-  res.cork =>
-    res.writeStatus(status)
-    if content_type
-      res.writeHeader 'Content-Type', content_type
-    if content_encoding
-      res.writeHeader 'Content-Encoding', content_encoding
-    res.end br
-    return
+  if not res.aborted
+    res.cork =>
+      res.writeStatus(status)
+      if content_type
+        res.writeHeader 'Content-Type', content_type
+      if content_encoding
+        res.writeHeader 'Content-Encoding', content_encoding
+      res.end br
+      return
   return

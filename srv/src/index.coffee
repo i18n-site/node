@@ -77,14 +77,13 @@ bind = (ws, name, f)=>
           url
           err
         )
-      if not res.aborted
-        br(
-          res
-          status
-          accept_encoding
-          res_content_type
-          r
-        )
+      br(
+        res
+        status
+        accept_encoding
+        res_content_type
+        r
+      )
       return
   )
   return
