@@ -1,0 +1,22 @@
+{
+  "name": "@8n/srv",
+  "version": "0.0.0",
+  "repository": "https://github.com/i18n-site/node.git",
+  "homepage": "https://github.com/i18n-site/node/tree/main/srv",
+  "author": "i18n.site@gmail.com",
+  "license": "BSL1.1",
+  "exports": {
+    ".": "./lib/index.js",
+    "./*": "./lib/*"
+  },
+  "files": [
+    "lib/*"
+  ],
+  "devDependencies": {},
+  "scripts": {},
+  "type": "module",
+  "trustedDependencies": ["uWebSockets"],
+  "dependencies": {
+    "uWebSockets": "github:uNetworking/uWebSockets.js#v20.32.0"
+  }
+}
