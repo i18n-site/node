@@ -5,22 +5,6 @@
   PORT
 } = process.env
 
-###
-
-uWebSockets 参考 SRFNStack 的用法
-https://github.com/SRFNStack/spliffy/tree/master/src
-
-返回值
-this 就是 req
-如果是一个函数，那么会传入 res
-会被 msgpack 下
-
-###
-
-# if r instanceof Function
-#   r(res)
-# else
-
 OK = '200'
 
 bind = (ws, name, f)=>
@@ -43,7 +27,7 @@ bind = (ws, name, f)=>
 
       try
         switch method
-          when 'post'
+          when 'post','put'
             body = await new Promise (resolve)=>
               li = []
               res.onData(
