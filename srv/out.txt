@@ -1,9 +1,3 @@
 /test
 → http://127.0.0.1:3223
 uWS.App {}
-{ content_type: 'application/json', method: 'post', url: '/test' }
-{ content_type: 'application/json', method: 'post', url: '/test' }
-body undefined
-{ content_type: 'application/json', method: 'post', url: '/test' }
-{ content_type: 'application/json', method: 'post', url: '/test' }
-body { abc: 123 }

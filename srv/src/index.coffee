@@ -37,7 +37,6 @@ bind = (ws, name, f)=>
         url
       }
 
-      console.log opt
       res.onAborted =>
         res.aborted = true
         return
