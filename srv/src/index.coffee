@@ -28,6 +28,23 @@ bind = (ws, name, f)=>
   ws.any(
     '/'+name
     (res, req)=>
+      url = req.getUrl()
+      res.onAborted =>
+        res.aborted = true
+        return
+
+      method = req.getMethod()
+      if method == 'post'
+        await new Promise (resolve)=>
+          res.onData(
+            (data, isLast) =>
+              console.log({data, isLast})
+              if isLast
+                resolve()
+              return
+          )
+          return
+      console.log '>>'
       try
         r = await f.call req
         if r instanceof Function
@@ -37,18 +54,17 @@ bind = (ws, name, f)=>
             r = ''
           else
             r = pack r
-          res.writeStatus(OK).end(r)
-        return
+        status = OK
       catch err
-        res.writeStatus('500').end(
-          ''+err
-        )
+        status = '500'
+        r = ''+err
         console.error(
-          req.getMethod()
-          req.getUrl()
+          method
+          url
           err
         )
-        return
+      if not res.aborted
+        res.writeStatus(status).end(r)
       return
   )
   return

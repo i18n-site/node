@@ -1,11 +1,8 @@
 ❯ test
 http://127.0.0.1:3223
 uWS.App {}
-get
-/test
-get
-/test
-get
-/test
-get
-/test
+{
+  data: ArrayBuffer { [Uint8Contents]: <>, byteLength: 0 },
+  isLast: true
+}
+>>
