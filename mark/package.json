@@ -1,8 +1,8 @@
 {
-  "name": "@8n/marked",
-  "version": "0.0.3",
+  "name": "@8n/mark",
+  "version": "0.0.1",
   "repository": "https://github.com/i18n-site/node.git",
-  "homepage": "https://github.com/i18n-site/node/tree/main/marked",
+  "homepage": "https://github.com/i18n-site/node/tree/main/mark",
   "author": "i18n.site@gmail.com",
   "license": "BSL1.1",
   "exports": {
@@ -16,6 +16,6 @@
   "scripts": {},
   "type": "module",
   "dependencies": {
-    "marked": "^9.0.3"
+    "micromark": "^4.0.0"
   }
 }
