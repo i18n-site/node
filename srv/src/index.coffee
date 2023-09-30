@@ -19,6 +19,7 @@ bind = (ws, name, func)=>
       console.log method, name
       url = req.getUrl()
       content_type = req.getHeader('content-type')
+      accept_language = req.getHeader 'accept-language'
       cookie = req.getHeader('cookie')
       if cookie
         cookie = Cookie.parse cookie
@@ -28,11 +29,13 @@ bind = (ws, name, func)=>
 
       opt = {
         content_type
+        accept_language
         accept_encoding
         method
         url
         cookie
       }
+      console.log opt
 
       res.onAborted =>
         res.aborted = true
