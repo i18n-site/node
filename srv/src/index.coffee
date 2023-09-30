@@ -8,6 +8,7 @@
 } = process.env
 
 < OK = '200'
+< NOT_FOUND = '404'
 < PORT = +PORT
 
 bind = (ws, name, func)=>
@@ -16,7 +17,6 @@ bind = (ws, name, func)=>
     '/'+name
     (res, req)=>
       method = req.getMethod()
-      console.log method, name
       url = req.getUrl()
       content_type = req.getHeader('content-type')
       accept_language = req.getHeader 'accept-language'
@@ -89,6 +89,7 @@ bind = (ws, name, func)=>
           err
         )
 
+      console.log status, method, name
       br(
         res
         status
@@ -109,8 +110,9 @@ bind = (ws, name, func)=>
   ws.any(
     '/*'
     (res, req) =>
+      console.log NOT_FOUND, req.getMethod(), req.getUrl()
       # https://unetworking.github.io/uWebSockets.js/generated/interfaces/HttpRequest.html#getMethod
-      res.writeStatus('404').end('')
+      res.writeStatus(NOT_FOUND).end('')
       return
   ).listen(
     PORT
