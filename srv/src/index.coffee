@@ -25,7 +25,7 @@ bind = (ws, name, func)=>
         cookie = Cookie.parse cookie
       accept_encoding = req.getHeader(
         'accept-encoding'
-      ).split(',').map((i)=>i.trim())
+      )
 
       opt = {
         content_type
@@ -35,6 +35,9 @@ bind = (ws, name, func)=>
         url
         cookie
       }
+
+      if accept_encoding
+        opt.accept_encoding = accept_encoding.split(',').map((i)=>i.trim())
       console.log opt
 
       res.onAborted =>
