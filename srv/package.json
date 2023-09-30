@@ -1,6 +1,6 @@
 {
   "name": "@8n/srv",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "repository": "https://github.com/i18n-site/node.git",
   "homepage": "https://github.com/i18n-site/node/tree/main/srv",
   "author": "i18n.site@gmail.com",
@@ -15,7 +15,9 @@
   "devDependencies": {},
   "scripts": {},
   "type": "module",
-  "trustedDependencies": ["uWebSockets"],
+  "trustedDependencies": [
+    "uWebSockets"
+  ],
   "dependencies": {
     "@w5/msgpack": "^0.0.2",
     "tough-cookie": "^4.1.3",
