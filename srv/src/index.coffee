@@ -30,7 +30,6 @@ bind = (ws, name, func)=>
       opt = {
         content_type
         accept_language
-        accept_encoding
         method
         url
         cookie
