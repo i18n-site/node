@@ -37,15 +37,14 @@ bind = (ws, name, func)=>
 
       if accept_encoding
         opt.accept_encoding = accept_encoding.split(',').map((i)=>i.trim())
-      console.log opt
 
-      res.onAborted =>
-        res.aborted = true
-        return
 
       try
         switch method
           when 'post','put'
+            res.onAborted =>
+              res.aborted = true
+              return
             body = await new Promise (resolve)=>
               li = []
               res.onData(
