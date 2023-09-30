@@ -2,8 +2,8 @@
 
 # todo 没有对字符串的引号和转义进行处理
 
-单行注释 = 1
-多行注释 = 2
+ONE_LINE_COMMNENT = 1
+MULTI_LINE_COMMENT = 2
 
 pythonComment = (txt)=>
   out = []
@@ -52,14 +52,14 @@ cStyleComment = (txt)=>
 
   while p < txtlen
     i = txt[p++]
-    if state == 多行注释
+    if state == MULTI_LINE_COMMENT
       if i == '*' and txt[p] == '/'
         ++p
         push_code()
         buffer+='*/'
       else
         buffer += i
-    else if state == 单行注释
+    else if state == ONE_LINE_COMMNENT
       buffer += i
       if txt[p] == '\n'
         push_code()
@@ -68,7 +68,7 @@ cStyleComment = (txt)=>
         switch txt[p]
           when '/'
             ++p
-            state = 单行注释
+            state = ONE_LINE_COMMNENT
             buffer += '//'
             while txt[p].trim() == ''
               buffer += txt[p++]
@@ -80,7 +80,7 @@ cStyleComment = (txt)=>
             while txt[p].trim() == ''
               buffer += txt[p++]
             push()
-            state = 多行注释
+            state = MULTI_LINE_COMMENT
             continue
       buffer += i
 
