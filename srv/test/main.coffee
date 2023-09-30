@@ -3,17 +3,6 @@
 > @8n/srv
 
 console.log srv(
-  # before
-  [
-    (res)->
-      res.writeHeader 'Set-Cookie', "222"
-      return
-  ]
-
-  # after
-  [
-
-  ]
   {
     test: (body)->
       # console.log @

@@ -10,7 +10,7 @@
 < OK = '200'
 < PORT = +PORT
 
-bind = (before, after, ws, name, func)=>
+bind = (ws, name, func)=>
   console.log '/'+name
   ws.any(
     '/'+name
@@ -55,10 +55,6 @@ bind = (before, after, ws, name, func)=>
               )
               return
 
-        for f from before
-          if await f.call opt, res
-            return
-
         if body and body.length > 0
           if content_type.endsWith '/json'
             body = JSON.parse body
@@ -89,11 +85,6 @@ bind = (before, after, ws, name, func)=>
           err
         )
 
-      for f from after
-        if await f.call opt, res
-          return
-
-
       br(
         res
         status
@@ -105,11 +96,11 @@ bind = (before, after, ws, name, func)=>
   )
   return
 
-< (before, after, route)=>
+< (route)=>
   ws = uWebSockets.App({})
 
   for [name,f] from Object.entries(route)
-    bind(before, after, ws, name, f)
+    bind(ws, name, f)
 
   ws.any(
     '/*'
