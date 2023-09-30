@@ -5,4 +5,4 @@ exec watchexec --shell=none \
   -w ./test \
   --exts coffee,js,mjs,json,wasm,txt,yaml \
   -r \
-  -- ./run.sh $exe
+  -- ./run.sh $@
