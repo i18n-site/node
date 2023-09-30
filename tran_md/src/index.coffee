@@ -4,7 +4,7 @@
   ./psfix.js
   ./tranComment.js
   @8n/htm2md
-  @w5/md2htm
+  @8n/mark
   @w5/tran > tranHtm
   @w5/utf8/utf8d.js
   @w5/utf8/utf8e.js
@@ -53,7 +53,7 @@
           [prefix, t, suffix] = psfix txt
           to_tran_prefix.push prefix
           to_tran_suffix.push suffix
-          to_tran_htm.push (await md2htm t).trimEnd()
+          to_tran_htm.push (mark t).trimEnd()
           to_tran_pos.push pos
           to_tran_hash.push hash
 
