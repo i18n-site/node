@@ -33,7 +33,7 @@ htm2md = (txt)=>
     if tag.startsWith 'img'
       if htm.indexOf(' style="') < 0
         return htm.replace(
-          /<img src="([^"]+)" alt="([^"]+)">/g, '![$2]($1)'
+          /<img src="([^"]+)" alt="([^"]+)"\s*\/?>/g, '![$2]($1)'
         )
       else
         return htm
