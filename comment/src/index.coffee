@@ -8,7 +8,8 @@ MULTI_LINE_COMMENT = 2
 pythonComment = (txt)=>
   out = []
   comment_pos = []
-  for i,pos in txt.split '\n'
+  txt_li = txt.split '\n'
+  for i,pos in txt_li
     it = i.trimStart()
     if it.startsWith '#'
       t = ''.padEnd(i.length - it.length)+'#'
@@ -18,9 +19,12 @@ pythonComment = (txt)=>
       i = it.trimEnd()
       comment_pos.push out.length
       out.push i
-      out.push '\n'
+      push = ''
     else
-      out.push i+'\n'
+      push = i
+    if 1+pos != txt_li.length
+      push += '\n'
+    out.push push
   [
     out
     comment_pos
