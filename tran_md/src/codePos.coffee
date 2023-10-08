@@ -18,10 +18,11 @@
         comment_pos_li
       ] = comment[lang] code.slice(1,-1).join('\n')
 
+      comment_pos_li = comment_pos_li.map (i)=>1+i
+      code_li.unshift code_first_line
       code_li.push code_last_line
       r.push [
         md_pos
-        code_first_line
         code_li
         comment_pos_li
       ]

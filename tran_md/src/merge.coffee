@@ -31,10 +31,10 @@ export default ([
     md[p] = prefix_title prefix, htm2md(htm_li[n])+suffix
 
   n = 0
-  for [p, code_first_line, code_li, comment_pos_li] from code_li
+  for [p, code_li, comment_pos_li] from code_li
     for i from comment_pos_li
       code_li[i] = comment_li[n++]
-    md[p] = code_first_line+code_li.join('')
+    md[p] = code_li.join('')
 
   md.join('')
 
