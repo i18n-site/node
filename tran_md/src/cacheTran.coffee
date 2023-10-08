@@ -2,7 +2,7 @@
 
 > zx/globals:
   @w5/uridir
-  @w5/req/reqMsg
+  @w5/req/reqMsg.js
   ./Hash.js
   ./noTran.js
   @w5/utf8/utf8d.js
