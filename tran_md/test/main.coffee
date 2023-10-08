@@ -7,17 +7,20 @@
   path > join
 
 ROOT = uridir(import.meta)
-enfp = join(ROOT,'en.md')
+lang = 'ja'
+langfp = join(ROOT,lang+'.md')
+form_lang = 'en'
 md = await tranMd(
-  read join ROOT, 'zh.md'
-  'zh'
+  read join ROOT, form_lang+'.md'
+  form_lang
 )(
-  'en'
-  join ROOT, 'cache.zh.en'
-  # enfp
+  lang
+  join ROOT, 'cache.'+form_lang+'.'+lang
+  # langfp
 )
 console.log md
-# write(
-#   enfp
-#   md
-# )
+if md
+  write(
+    langfp
+    md
+  )

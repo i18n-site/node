@@ -1,69 +1,47 @@
-[Write Markdown native comments here]:#
+# I18N.SITE · Language Without Borders<img Src="//ok0.pw/5l" Style="float:right;width:42px;margin-Top:6px">
 
-# Test
+I18N.SITE, a multi-language static site generator, can automatically translate Markdown into [more than a hundred different languages](https://github.com/i18n-site/node/blob/main/lang/src/index.js) .
 
-## Comment
+<img src="http://s-cd-3653-i18n-img.oss.dogecdn.com/i18n.lang.webp" alt="" />
 
-<!-- 单行 HTML 注释 --> 
-test
+Some people may want to ask, now that browsers have built-in translation functions, is it unnecessary to internationalize the website?
 
-<!--
-多行
-HTML
-注释
--->
+I want to say that **only by internationalizing the entire site can we support multi-lingual in-site full-text search and search engine optimization** .
 
-## List
+## Tutorial
 
-1. Row 1
-2. Row 2
-3. Row 3
+## Function Introduction
 
-## Quote
+### Keep Markdown Format
 
-> Road to Road, very Avenue
+### Modify Translation
 
-## Link
+After modifying the translation, you need to re-run `./i18n.sh` to update the cache.
 
-[Markdown documentation](https://github.com/i18n-site/i18n-site-md)
+### Translation Notes
 
-## Picture
+Translation comments need to indicate the language after \```, such as ` ```rust` .
 
-![xxAI.Art Brand Identity](https://raw.githubusercontent.com/i18n-site/web/main/file/svg/logo.svg)
+Currently supports comment translation for rust, c, cpp, java, js, coffee, python, and bash.
 
-## Indentation
+Edit [tran_md/src/comment.coffee](https://github.com/i18n-site/node/blob/main/tran_md/src/comment.coffee) to add translation support for comments in more languages.
 
-Mr. Lu Xun wrote in "Self-titled Portrait" :
+### Configure Proxy
 
-  Lingtai has no plan to escape from the divine arrow
-  Stormy and Dark Hometown
-  The meaning of the cold star is not noticed
-  I recommend Xuanyuan with my blood
+Setting the following environment variables allows Google Translate API calls to go through the proxy.
 
----
-
-Name | age
----- | ---
-Wang Dachui | 12
-bruce lee |  32
-
-## Code Snippet
-
-`CoffeeScript` code
-
-```coffee
-# coffee code comments
-console.log 'good'
+```bash
+export https_proxy=http://127.0.0.1:7890
 ```
 
-```rust
-/* rust code comments */
+### Variable Embedding
 
-fn main(){
-  dbg!("yes");
-}
+```
+test: 测试变量<br 0>嵌入
 ```
 
-test
+### Empty The Cache
 
-134
+```bash
+rm -rf .i18n/.cache
+```

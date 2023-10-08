@@ -1,70 +1,47 @@
-[这里写 Markdown 原生注释]:#
+# I18N.SITE · 语言无国界 <img src="//ok0.pw/5l" style="float:right;width:42px;margin-top:6px">
 
-# 测试
+I18N.SITE，多语言的静态站点生成器，能将 Markdown 自动翻译为 [一百多种不同的语言](https://github.com/i18n-site/node/blob/main/lang/src/index.js) 。
 
-## 注释
+![](http://s-cd-3653-i18n-img.oss.dogecdn.com/i18n.lang.webp)
 
-<!-- 单行 HTML 注释 -->
+也许会有人想问，现在浏览器都自带翻译功能了，做网站国际化是不是多此一举？
 
-测试
+我想说，**只有做了全站国际化，才能支持多语种的站内全文搜索和搜索引擎优化** 。
 
-<!--
-多行
-HTML
-注释
--->
+## 使用教程
 
-## 列表
+## 功能简介
 
-1. 行 1
-2. 行 2
-3. 行 3
+### 保留 Markdown 格式
 
-## 引用
+### 修改译文
 
-> 道可道，非常道
+修改译文后需要重新运行 `./i18n.sh` 更新缓存。
 
-## 链接
+### 翻译注释
 
-[Markdown 文档](https://github.com/i18n-site/i18n-site-md)
+翻译注释，需要在 \``` 之后表明语言， 比如 ` ```rust ` 。
 
-## 图片
+目前支持 rust,c,cpp,java,js,coffee,python,bash 的注释翻译。
 
-![xxAI.Art 品牌标识](https://raw.githubusercontent.com/i18n-site/web/main/file/svg/logo.svg)
+编辑 [tran_md/src/comment.coffee](https://github.com/i18n-site/node/blob/main/tran_md/src/comment.coffee) 可添加更多语言注释的翻译支持。
 
-## 缩进
+### 配置代理
 
-鲁迅先生在《自题小像》写道 :
+设置如下的环境变量，可以让谷歌翻译的 API 调用走代理。
 
-  灵台无计逃神矢
-  风雨如磐暗故园
-  寄意寒星荃不察
-  我以我血荐轩辕
-
----
-
-姓名 | 年龄
----- | ---
-王大锤 | 12
-李小龙 |  32
-
-## 代码段
-
-`CoffeeScript` 代码
-
-```coffee
-# coffee 代码注释
-console.log 'good'
+```bash
+export https_proxy=http://127.0.0.1:7890
 ```
 
-```rust
-/* rust 代码注释 */
+### 变量嵌入
 
-fn main(){
-  dbg!("yes");
-}
+```
+test: 测试变量<br 0>嵌入
 ```
 
-测试
+### 清空缓存
 
-134
+```bash
+rm -rf .i18n/.cache
+```

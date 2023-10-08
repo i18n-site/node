@@ -1,70 +1,48 @@
-[Write Markdown native comments here]:#
+# I18N.SITE · 国境なき言語<img Src="//ok0.pw/5l" Style="float:right;width:42px;margin-Top:6px">
 
-# Test
+多言語静的サイト ジェネレーターである I18N.SITE は、Markdown を[100 以上の異なる言語](https://github.com/i18n-site/node/blob/main/lang/src/index.js)に自動的に翻訳できます。
 
-## Comment
+<img src="http://s-cd-3653-i18n-img.oss.dogecdn.com/i18n.lang.webp" alt="" />
 
-<!-- 单行 HTML 注释 --> 
-test
+ブラウザに翻訳機能が組み込まれているので、Web サイトを国際化する必要はないのではないかと疑問に思う人もいるかもしれません。
 
-<!--
-多行
-HTML
-注释
--->
+**サイト全体を国際化することによってのみ、多言語のサイト内全文検索と検索エンジンの最適化をサポートできると**言いたいのです。
 
-## List
+## チュートリアル
 
-1. Row 1
-2. Row 2
-3. Row 3
+## 機能紹介
 
-## Quote
+### マークダウン形式を維持する
 
-> Road to Road, very Avenue
+### 翻訳の変更
 
-## Link
+変換を変更した後、 `./i18n.sh`を再実行してキャッシュを更新する必要があります。
 
-[Markdown documentation](https://github.com/i18n-site/i18n-site-md)
+### 翻訳メモ
 
-## Picture
+翻訳コメントでは、 ` ```rust`のように \``` の後に言語を示す必要があります。
 
-![xxAI.Art Brand Identity](https://raw.githubusercontent.com/i18n-site/web/main/file/svg/logo.svg)
+現在、rust、c、cpp、java、js、coffee、python、bash のコメント翻訳をサポートしています。
 
-## Indentation
+[tran_md/src/comment.coffee](https://github.com/i18n-site/node/blob/main/tran_md/src/comment.coffee)を編集して、より多くの言語のコメントの翻訳サポートを追加します。
 
-Mr. Lu Xun wrote in "Self-titled Portrait" :
+### プロキシの構成
 
-  Lingtai has no plan to escape from the divine arrow
-  Stormy and Dark Hometown
-  The meaning of the cold star is not noticed
-  I recommend Xuanyuan with my blood
+次の環境変数を設定すると、Google Translate API 呼び出しがプロキシを経由できるようになります。
 
----
-
-Name | age
----- | ---
-Wang Dachui | 12
-bruce lee |  32
-
-## Code Snippet
-
-`CoffeeScript` code
-
-```coffee
-# coffee code comments
-console.log 'good'
+```bash
+export https_proxy=http://127.0.0.1:7890
 ```
 
-```rust
-/* rust code comments */
+### 変数の埋め込み
 
-fn main(){
-  dbg!("yes");
-}
+```
+test: 测试变量<br 0>嵌入
 ```
 
-test
+### キャッシュを空にしてください
 
-134
+```bash
+rm -rf .i18n/.cache
+```
 
