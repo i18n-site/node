@@ -24,8 +24,8 @@ dependencies:
     specifier: ^0.0.4
     version: 0.0.4
   '@8n/tran_md':
-    specifier: ^0.0.20
-    version: 0.0.20
+    specifier: ^0.0.21
+    version: 0.0.21
   '@w5/bar':
     specifier: ^0.0.5
     version: 0.0.5
@@ -136,8 +136,8 @@ packages:
       - supports-color
     dev: false
 
-  /@8n/tran_md@0.0.20:
-    resolution: {integrity: sha512-sHwp6LU515+we5sHWRxmmwmmmVqQoHYHYqOYhFNLBDeheyzKH+zzMB5GflXohiMASwrH0UZj2qcy+0mmoc356g==}
+  /@8n/tran_md@0.0.21:
+    resolution: {integrity: sha512-NUuU/q+kxK68TvMkDJfzo5ZrVbiB2Aou5JVQq0HLBXpcvDRLDwxuZdA9SrheUzuSEq2zil12dGqLp/S4QNDhLA==}
     dependencies:
       '@8n/cache_map': 0.0.13
       '@8n/comment': 0.0.2
