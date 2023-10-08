@@ -1,6 +1,6 @@
 {
   "name": "@8n/tran_md",
-  "version": "0.0.17",
+  "version": "0.0.18",
   "repository": "https://github.com/i18n-site/node.git",
   "homepage": "https://github.com/i18n-site/node/tree/main/tran_md",
   "author": "i18n.site@gmail.com",
@@ -21,7 +21,7 @@
     "@8n/mark": "^0.0.1",
     "@8n/replace_n": "^0.0.4",
     "@8n/title-case": "^0.0.5",
-    "@8n/tran": "^0.0.1",
+    "@8n/tran": "^0.0.2",
     "@w5/read": "^0.0.1",
     "@w5/req": "^0.0.13",
     "@w5/utf8": "^0.0.3"
