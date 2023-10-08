@@ -21,8 +21,8 @@ dependencies:
     specifier: ^0.0.12
     version: 0.0.12
   '@8n/tran_md':
-    specifier: ^0.0.15
-    version: 0.0.15
+    specifier: ^0.0.16
+    version: 0.0.16
   '@8n/vbyte':
     specifier: ^0.0.2
     version: 0.0.2
@@ -128,8 +128,8 @@ packages:
     resolution: {integrity: sha512-J5IDWPFwkBdiOkkAVIXn94I426n2Z/mEM77eD/GscomhkBWOJQb1s5RagzjTrpTqY6Uup/sBoCsBAvgVfSbgAw==}
     dev: false
 
-  /@8n/tran_md@0.0.15:
-    resolution: {integrity: sha512-Q61J0JIBz76nnZY7uD24chL142wDtLRK5OL3AVK8v5gRsU2C8hyejbq3RpbLz84hqdSD7YHP385nmRxBEfdYcA==}
+  /@8n/tran_md@0.0.16:
+    resolution: {integrity: sha512-nkBwRx3r1UR46B36y2lL8ZgABROs2xl+MptmUkNt+WqXCXe6LxeolJ4wB2sPkyOxMNzbCtRUw+MSSiDOH3deYQ==}
     dependencies:
       '@8n/cache_map': 0.0.13
       '@8n/comment': 0.0.2
