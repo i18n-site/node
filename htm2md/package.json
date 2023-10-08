@@ -1,6 +1,6 @@
 {
   "name": "@8n/htm2md",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "repository": "https://github.com/i18n-site/node.git",
   "homepage": "https://github.com/i18n-site/node/tree/main/htm2md",
   "author": "i18n.site@gmail.com",
@@ -13,5 +13,8 @@
     "lib/*"
   ],
   "scripts": {},
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "lodash-es": "^4.17.21"
+  }
 }

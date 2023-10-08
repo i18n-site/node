@@ -1,3 +1,5 @@
+> lodash-es > unescape
+
 htm2md = (txt)=>
   txt.replace(
     /([^\\])```/g,'$1\\```'
@@ -21,6 +23,9 @@ htm2md = (txt)=>
   )
 
 < (htm)=>
+  if htm.indexOf('<') < 0
+    return unescape htm
+
   p = htm.indexOf('>')
   if p > 0
     tag = htm.slice(1,p++)
