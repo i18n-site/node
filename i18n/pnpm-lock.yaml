@@ -21,11 +21,11 @@ dependencies:
     specifier: ^0.0.12
     version: 0.0.12
   '@8n/tran':
-    specifier: ^0.0.1
-    version: 0.0.1
+    specifier: ^0.0.2
+    version: 0.0.2
   '@8n/tran_md':
-    specifier: ^0.0.17
-    version: 0.0.17
+    specifier: ^0.0.18
+    version: 0.0.18
   '@w5/bar':
     specifier: ^0.0.5
     version: 0.0.5
@@ -122,8 +122,8 @@ packages:
     resolution: {integrity: sha512-J5IDWPFwkBdiOkkAVIXn94I426n2Z/mEM77eD/GscomhkBWOJQb1s5RagzjTrpTqY6Uup/sBoCsBAvgVfSbgAw==}
     dev: false
 
-  /@8n/tran@0.0.1:
-    resolution: {integrity: sha512-QDn+Sqou3gbsi0Cv1UPrhaLuE6rZOlCjAIsneCcK4JqXjRlsVSJTIqQUBoAvBfUjBfQztqmOYa0pwItU4Cxl4g==}
+  /@8n/tran@0.0.2:
+    resolution: {integrity: sha512-RGYt+SUV9lftehIOCzYCUh2bCnkJxQDmDyif1SOUrCx5oP8hB7heCIiiqrYKVx2lYXVoEa7SvYMssNjmmBlXbw==}
     dependencies:
       '@w5/req': 0.0.13
       '@w5/utf8': 0.0.3
@@ -132,8 +132,8 @@ packages:
       - supports-color
     dev: false
 
-  /@8n/tran_md@0.0.17:
-    resolution: {integrity: sha512-8VpaGhaM/toc3ewknyc/rU0GGsB5/+6UaJleo0Sog133I5o7UwBhyHl6fVkTWVaeMdAr5EKLBCzDoe8m6VmaDA==}
+  /@8n/tran_md@0.0.18:
+    resolution: {integrity: sha512-eN6IeakIFsFZLnCw7BDrWzk7BXO8PSDf6Egwyf3ENbUUj2kY0zMm7yFuZpAArRZYHlWPViezyM5zMMCYgZ1h6A==}
     dependencies:
       '@8n/cache_map': 0.0.13
       '@8n/comment': 0.0.2
@@ -141,7 +141,7 @@ packages:
       '@8n/mark': 0.0.1
       '@8n/replace_n': 0.0.4
       '@8n/title-case': 0.0.5
-      '@8n/tran': 0.0.1
+      '@8n/tran': 0.0.2
       '@w5/read': 0.0.1
       '@w5/req': 0.0.13
       '@w5/utf8': 0.0.3
