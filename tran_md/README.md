@@ -23,7 +23,7 @@ md = await tranMd(
   join ROOT, 'cache.zh.en'
   enfp
 )
-console.log md
+# console.log md
 # write(
 #   enfp
 #   md
@@ -33,7 +33,5 @@ console.log md
 output :
 
 ```
-set 测试 123
-test 123 test
-undefined
+./out.txt
 ```
