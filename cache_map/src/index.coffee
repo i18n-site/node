@@ -1,7 +1,7 @@
 > @w5/binmap > BinMap
   @w5/write
   @w5/utf8/utf8e.js
-  fs > existsSync readFileSync
+  fs > existsSync unlinkSync readFileSync
 
 encode = (k)=>
   if k.constructor == String
@@ -33,10 +33,13 @@ encode = (k)=>
       return
 
     => #save
-      write(
-        fp
-        m.dump()
-      )
+      if m.size
+        write(
+          fp
+          m.dump()
+        )
+      else if existsSync fp
+        unlinkSync fp
       return
   ]
 
