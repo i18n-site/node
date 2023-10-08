@@ -2,6 +2,7 @@
 
 > @w5/req/reqMsg.js
   @w5/utf8/utf8d.js
+  @w5/j2f
   ./Hash.js
   ./noTran.js
 
@@ -63,6 +64,14 @@ export default (
   tcache
   hcache
 )=>
+  txt_li = txt_li or []
+  htm_li = html_li or []
+
+  if from_lang == 'zh' and to_lang == 'zh-TW'
+    return [
+      txt_li.map j2f
+      htm_li.map j2f
+    ]
   if hcache
     [hget, hset, hsave] = hcache
     [
@@ -71,7 +80,7 @@ export default (
       to_tran_htm_pos
     ] = cachedTran(htm_li, hget)
   else
-    to_tran_htm = htm_li or []
+    to_tran_htm = htm_li
 
   if tcache
     [tget, tset, tsave] = tcache
@@ -81,7 +90,7 @@ export default (
       to_tran_txt_pos
     ] = cachedTran(txt_li, tget)
   else
-    to_tran_txt = txt_li or []
+    to_tran_txt = txt_li
 
   if to_tran_htm.length or to_tran_txt.length
     [h,t] = await reqMsg API+'tran', {
