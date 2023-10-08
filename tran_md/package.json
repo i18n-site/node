@@ -15,7 +15,7 @@
   "scripts": {},
   "type": "module",
   "dependencies": {
-    "@8n/cache_map": "^0.0.12",
+    "@8n/cache_map": "^0.0.13",
     "@8n/comment": "^0.0.2",
     "@8n/htm2md": "^0.0.6",
     "@8n/mark": "^0.0.1",

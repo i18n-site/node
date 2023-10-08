@@ -23,16 +23,14 @@ update = (
   for i, p in src_li
     hash = Hash i
     new_txt = new_li[p]
-    if exist.has(hash)
+    if exist.has(i)
       continue
     pre = get(hash)
     if pre
       pre = utf8d pre
     if pre != new_txt
-      console.log 'set',i,new_txt
-      exist.add pre
+      exist.add i
       set hash, new_txt
-      console.log pre,new_txt, utf8d get(hash)
   save()
   return
 

@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   '@8n/cache_map':
-    specifier: ^0.0.12
-    version: 0.0.12
+    specifier: ^0.0.13
+    version: 0.0.13
   '@8n/comment':
     specifier: ^0.0.2
     version: 0.0.2
@@ -46,8 +46,8 @@ devDependencies:
 
 packages:
 
-  /@8n/cache_map@0.0.12:
-    resolution: {integrity: sha512-jKpkXUKKNTfz5CKXoRIwiQGrFc2QKSUeW5OdTHeQcHvVCPWGK+7HAgp6bxIbwjlpC0ZwpaoWXEpWxiaV4BNxeA==}
+  /@8n/cache_map@0.0.13:
+    resolution: {integrity: sha512-zpdQ2WMtbStG1fh2E9xWqXtRodZY+T17QIQOqDE2eXaHYTDrw8zElVyy8Wf6OLuHq0f1pRsKKZj/NO7Yu75aYQ==}
     dependencies:
       '@w5/binmap': 0.0.7
       '@w5/utf8': 0.0.3
