@@ -47,6 +47,9 @@ dependencies:
   '@w5/write':
     specifier: ^0.0.1
     version: 0.0.1
+  '@w5/xxhash3-wasm':
+    specifier: ^0.0.6
+    version: 0.0.6
   yargs:
     specifier: ^17.7.2
     version: 17.7.2
