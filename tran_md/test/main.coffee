@@ -14,10 +14,10 @@ md = await tranMd(
 )(
   'en'
   join ROOT, 'cache.zh.en'
-  # enfp
-)
-console.log md
-write(
   enfp
-  md
 )
+# console.log md
+# write(
+#   enfp
+#   md
+# )

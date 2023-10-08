@@ -29,7 +29,7 @@ update = (
     pre = get(hash)
     if pre
       pre = utf8d pre
-    else if noTran(pre) and i == new_txt
+    else if noTran(i) and i == new_txt
       continue
     if pre != new_txt
       exist.add i
