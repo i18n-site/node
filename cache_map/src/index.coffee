@@ -16,6 +16,8 @@ encode = (k)=>
   else
     prem = m
 
+  change = 0
+
   [
     (k)=> # get
       k = encode k
@@ -27,17 +29,20 @@ encode = (k)=>
 
 
     (k,v)=> # set
+      ++change
       k = encode k
       v = encode v
       m.set k,v
+      prem.set k,v
       return
 
     => #save
       if m.size
-        write(
-          fp
-          m.dump()
-        )
+        if change
+          write(
+            fp
+            m.dump()
+          )
       else if existsSync fp
         unlinkSync fp
       return

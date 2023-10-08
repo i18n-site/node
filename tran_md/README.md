@@ -7,42 +7,33 @@
 ```coffee
 #!/usr/bin/env coffee
 
-> @8n/tran_md
+> ../lib/index.js:tranMd
   @w5/uridir
   @w5/read
-  path > join
   @w5/write
-  fs > existsSync
+  path > join
 
 ROOT = uridir(import.meta)
-
-fp = join(ROOT, 'zh.md')
-en_fp = join ROOT,'en.md'
-
-args = [
-  'en'
-  join(ROOT,'.cache')
-]
-
-if existsSync en_fp
-  args.push en_fp
-
-en = await TranMd(
-  read(fp)
+enfp = join(ROOT,'en.md')
+md = await tranMd(
+  read join ROOT, 'zh.md'
   'zh'
 )(
-  ...args
+  'en'
+  join ROOT, 'cache.zh.en'
+  enfp
 )
-if args.length == 2
-  console.log en
-  write(
-    en_fp
-    en
-  )
+console.log md
+# write(
+#   enfp
+#   md
+# )
 ```
 
 output :
 
 ```
-./out.txt
+set 测试 123
+test 123 test
+undefined
 ```

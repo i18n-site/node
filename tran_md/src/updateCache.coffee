@@ -32,7 +32,7 @@ update = (
       console.log 'set',i,new_txt
       exist.add pre
       set hash, new_txt
-      console.log utf8d get(hash)
+      console.log pre,new_txt, utf8d get(hash)
   save()
   return
 
