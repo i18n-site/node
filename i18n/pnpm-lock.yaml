@@ -20,6 +20,9 @@ dependencies:
   '@8n/nt':
     specifier: ^0.0.12
     version: 0.0.12
+  '@8n/tran':
+    specifier: ^0.0.1
+    version: 0.0.1
   '@8n/tran_md':
     specifier: ^0.0.16
     version: 0.0.16
@@ -123,6 +126,16 @@ packages:
 
   /@8n/title-case@0.0.5:
     resolution: {integrity: sha512-J5IDWPFwkBdiOkkAVIXn94I426n2Z/mEM77eD/GscomhkBWOJQb1s5RagzjTrpTqY6Uup/sBoCsBAvgVfSbgAw==}
+    dev: false
+
+  /@8n/tran@0.0.1:
+    resolution: {integrity: sha512-QDn+Sqou3gbsi0Cv1UPrhaLuE6rZOlCjAIsneCcK4JqXjRlsVSJTIqQUBoAvBfUjBfQztqmOYa0pwItU4Cxl4g==}
+    dependencies:
+      '@w5/req': 0.0.13
+      '@w5/utf8': 0.0.3
+      '@w5/xxhash3-wasm': 0.0.6
+    transitivePeerDependencies:
+      - supports-color
     dev: false
 
   /@8n/tran_md@0.0.16:
