@@ -4,6 +4,7 @@
   @w5/uridir
   @w5/req/reqMsg
   ./Hash.js
+  ./noTran.js
   @w5/utf8/utf8d.js
 
 API = (process.env.I18N_SITE_API or 'https://api.i18n.site')+ '/'
@@ -26,6 +27,8 @@ cachedTran = (
     pre = get(hash)
     if pre != undefined
       traned_li[p] = utf8d pre
+    else if noTran i
+      traned_li[p] = i
     else
       to_tran.push i
       to_tran_pos.push p
