@@ -27,5 +27,5 @@ export https_proxy=http://127.0.0.1:7890
 output :
 
 ```
-use https_proxy http://127.0.0.1:7890
+./out.txt
 ```
