@@ -65,7 +65,7 @@ export default (
   hcache
 )=>
   txt_li = txt_li or []
-  htm_li = html_li or []
+  htm_li = htm_li or []
 
   if from_lang == 'zh' and to_lang == 'zh-TW'
     return [
