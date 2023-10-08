@@ -1,1 +1,3 @@
-.cache
+lib/
+test/cache.*
+test/en.md

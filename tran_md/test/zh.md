@@ -2,23 +2,6 @@
 
 # 测试
 
-## 代码段
-
-`CoffeeScript` 代码
-
-```coffee
-# coffee 代码注释
-console.log 'good'
-```
-
-```rust
-/* rust 代码注释 */
-
-fn main(){
-  dbg!("yes");
-}
-```
-
 ## 注释
 
 <!-- 单行 HTML 注释 -->
@@ -57,3 +40,29 @@ HTML
   风雨如磐暗故园
   寄意寒星荃不察
   我以我血荐轩辕
+
+---
+
+姓名 | 年龄
+---- | ---
+王大锤 | 12
+李小龙 |  32
+
+## 代码段
+
+`CoffeeScript` 代码
+
+```coffee
+# coffee 代码注释
+console.log 'good'
+```
+
+```rust
+/* rust 代码注释 */
+
+fn main(){
+  dbg!("yes");
+}
+```
+
+测试

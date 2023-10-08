@@ -1,9 +1,20 @@
 #!/usr/bin/env coffee
 
-< default main = (str)=>
-  s = str.trimStart()
-  prefix = ''.padEnd str.length - s.length
+
+< default main = (s)=>
+  prefix = ''
   suffix = ''
+
+  trimStart = =>
+    t = s.trimStart()
+    diff = s.length - t.length
+    if diff > 0
+      prefix += ''.padEnd(diff)
+      s = t
+    return
+
+  trimStart()
+
   for i,p in s
     if i != '#'
       break
@@ -15,17 +26,22 @@
     trimEnd = s.trimEnd()
     if trimEnd.startsWith('[') and trimEnd.endsWith(']:#')
       prefix = '['
+      suffix = s.slice(trimEnd.length-3)
       s = trimEnd.slice(1,-3)
-      suffix = ']:#'
     else
-      for i from '-+*'
+      for i from ['-','+','*','[ ]','[x]']
         if s.startsWith i+' '
-          prefix += s.slice(0,2)
-          s = s.slice(2)
-          break
-      if s.startsWith '> '
-        prefix += '> '
-        s = s.slice(2)
+          len = i.length + 1
+          prefix += s.slice(0,len)
+          s = s.slice(len)
+          trimStart()
+
+      trimStart()
+
+
+      if s.startsWith '>'
+        prefix += '>'
+        s = s.slice(1)
         t = s.trimStart()
         prefix += ''.padEnd(s.length - t.length)
         s = t
@@ -35,6 +51,16 @@
           [t] = t
           prefix += t
           s = s.slice(t.length)
+
+  p = length = s.length
+  if p
+    while p
+      c = s.charAt --p
+      if not ' \n:'.includes c
+        break
+    suffix = s.slice(p+1) + suffix
+    s = s.slice(0,p+1)
+
   [
     prefix
     s
@@ -46,8 +72,13 @@ if process.argv[1] == decodeURI (new URL(import.meta.url)).pathname
     '## 1'
     '* 1'
     '>   1'
+    '>1'
     '  1'
+    '-1'
     '123.  1'
+    '  - [x] 测试'
+    '  - [ ] 测试'
+    '    - 段落标题'
     '[测试]:#'
   ]
     console.log main i

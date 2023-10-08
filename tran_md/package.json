@@ -12,20 +12,22 @@
   "files": [
     "lib/*"
   ],
-  "devDependencies": {
-    "@w5/uridir": "^0.0.1"
-  },
   "scripts": {},
   "type": "module",
   "dependencies": {
-    "@8n/cache_map": "^0.0.11",
-    "@8n/htm2md": "^0.0.4",
+    "@8n/cache_map": "^0.0.12",
+    "@8n/comment": "^0.0.2",
+    "@8n/htm2md": "^0.0.6",
     "@8n/mark": "^0.0.1",
     "@8n/replace_n": "^0.0.4",
     "@8n/title-case": "^0.0.5",
-    "@w5/read": "^0.0.1",
-    "@w5/tran": "^0.0.6",
+    "@w5/req": "^0.0.13",
     "@w5/utf8": "^0.0.3",
+    "@w5/read": "^0.0.1",
     "@w5/xxhash3-wasm": "^0.0.6"
+  },
+  "devDependencies": {
+    "@w5/uridir": "^0.0.1",
+    "@w5/write": "^0.0.1"
   }
 }
