@@ -16,19 +16,10 @@
 
   [prefix_suffix, md_li] = mdpsfix(src,pos_li)
 
-  _md_li = []
-  _pos_li = []
-  _prefix_suffix = []
-  for i,p in md_li
-    if i and Number.isNaN +i # 纯数字不翻译
-      _md_li.push md_li[p]
-      _pos_li.push pos_li[p]
-      _prefix_suffix.push prefix_suffix[p]
-
 
   htm_li = []
   htm_pos = []
-  for i,n in _md_li.map(mark).map(
+  for i,n in md_li.map(mark).map(
     (i)=>
       if i.charAt(2) == '>'
         i = i.slice(3,-4)
@@ -40,11 +31,11 @@
     # else
     htm_li.push i
     # htm_txt_li.push _md_li[n]
-    p = _pos_li[n]
+    p = pos_li[n]
     delete src[p]
     htm_pos.push [
       p
-      ..._prefix_suffix[n]
+      ...prefix_suffix[n]
     ]
 
   [code_li, comment_li] = codePos(src,code_pos_li)

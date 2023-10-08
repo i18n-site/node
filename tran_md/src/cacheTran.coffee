@@ -8,6 +8,12 @@
 
 API = (process.env.I18N_SITE_API or 'https://api.i18n.site')+ '/'
 
+# for i,p in md_li
+#   if i and Number.isNaN +i # 纯数字不翻译
+#     _md_li.push md_li[p]
+#     _pos_li.push pos_li[p]
+#     _prefix_suffix.push prefix_suffix[p]
+
 cachedTran = (
   li
   get
