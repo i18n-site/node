@@ -56,7 +56,8 @@ merge = (
 
 
 export default (
-  from_lang, to_lang
+  from_lang
+  to_lang
   txt_li
   htm_li
   tcache
@@ -70,7 +71,7 @@ export default (
       to_tran_htm_pos
     ] = cachedTran(htm_li, hget)
   else
-    to_tran_htm = []
+    to_tran_htm = htm_li or []
 
   if tcache
     [tget, tset, tsave] = tcache
@@ -80,7 +81,7 @@ export default (
       to_tran_txt_pos
     ] = cachedTran(txt_li, tget)
   else
-    to_tran_txt = []
+    to_tran_txt = txt_li or []
 
   if to_tran_htm.length or to_tran_txt.length
     [h,t] = await reqMsg API+'tran', {
@@ -101,6 +102,8 @@ export default (
         hset
         hsave
       )
+    else
+      traned_htm_li = h
     if tcache
       merge(
         t
@@ -110,7 +113,8 @@ export default (
         tset
         tsave
       )
-
+    else
+      traned_txt_li = t
   [
     traned_txt_li
     traned_htm_li

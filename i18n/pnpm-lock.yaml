@@ -24,11 +24,8 @@ dependencies:
     specifier: ^0.0.1
     version: 0.0.1
   '@8n/tran_md':
-    specifier: ^0.0.16
-    version: 0.0.16
-  '@8n/vbyte':
-    specifier: ^0.0.2
-    version: 0.0.2
+    specifier: ^0.0.17
+    version: 0.0.17
   '@w5/bar':
     specifier: ^0.0.5
     version: 0.0.5
@@ -50,9 +47,6 @@ dependencies:
   '@w5/write':
     specifier: ^0.0.1
     version: 0.0.1
-  '@w5/xxhash3-wasm':
-    specifier: ^0.0.6
-    version: 0.0.6
   yargs:
     specifier: ^17.7.2
     version: 17.7.2
@@ -138,8 +132,8 @@ packages:
       - supports-color
     dev: false
 
-  /@8n/tran_md@0.0.16:
-    resolution: {integrity: sha512-nkBwRx3r1UR46B36y2lL8ZgABROs2xl+MptmUkNt+WqXCXe6LxeolJ4wB2sPkyOxMNzbCtRUw+MSSiDOH3deYQ==}
+  /@8n/tran_md@0.0.17:
+    resolution: {integrity: sha512-8VpaGhaM/toc3ewknyc/rU0GGsB5/+6UaJleo0Sog133I5o7UwBhyHl6fVkTWVaeMdAr5EKLBCzDoe8m6VmaDA==}
     dependencies:
       '@8n/cache_map': 0.0.13
       '@8n/comment': 0.0.2
@@ -147,10 +141,10 @@ packages:
       '@8n/mark': 0.0.1
       '@8n/replace_n': 0.0.4
       '@8n/title-case': 0.0.5
+      '@8n/tran': 0.0.1
       '@w5/read': 0.0.1
       '@w5/req': 0.0.13
       '@w5/utf8': 0.0.3
-      '@w5/xxhash3-wasm': 0.0.6
     transitivePeerDependencies:
       - supports-color
     dev: false
