@@ -27,6 +27,7 @@ export default ([
   code_li
   md
 ])=>
+  md = md.slice()
   for [p,prefix,suffix],n in htm_pos
     md[p] = prefix_title prefix, htm2md(htm_li[n])+suffix
 
