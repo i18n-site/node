@@ -1,9 +1,9 @@
 #!/usr/bin/env coffee
 
 > @w5/req/reqMsg.js
+  @w5/utf8/utf8d.js
   ./Hash.js
   ./noTran.js
-  @w5/utf8/utf8d.js
 
 API = (process.env.I18N_SITE_API or 'https://api.i18n.site')+ '/'
 
@@ -59,20 +59,28 @@ export default (
   from_lang, to_lang
   txt_li
   htm_li
-  [tget, tset, tsave]
-  [hget, hset, hsave]
+  tcache
+  hcache
 )=>
+  if hcache
+    [hget, hset, hsave] = hcache
+    [
+      traned_htm_li
+      to_tran_htm
+      to_tran_htm_pos
+    ] = cachedTran(htm_li, hget)
+  else
+    to_tran_htm = []
 
-  [
-    traned_htm_li
-    to_tran_htm
-    to_tran_htm_pos
-  ] = cachedTran(htm_li, hget)
-  [
-    traned_txt_li
-    to_tran_txt
-    to_tran_txt_pos
-  ] = cachedTran(txt_li, tget)
+  if tcache
+    [tget, tset, tsave] = tcache
+    [
+      traned_txt_li
+      to_tran_txt
+      to_tran_txt_pos
+    ] = cachedTran(txt_li, tget)
+  else
+    to_tran_txt = []
 
   if to_tran_htm.length or to_tran_txt.length
     [h,t] = await reqMsg API+'tran', {
@@ -84,22 +92,24 @@ export default (
         to_tran_txt
       ]
     }
-    merge(
-      h
-      traned_htm_li
-      to_tran_htm
-      to_tran_htm_pos
-      hset
-      hsave
-    )
-    merge(
-      t
-      traned_txt_li
-      to_tran_txt
-      to_tran_txt_pos
-      tset
-      tsave
-    )
+    if hcache
+      merge(
+        h
+        traned_htm_li
+        to_tran_htm
+        to_tran_htm_pos
+        hset
+        hsave
+      )
+    if tcache
+      merge(
+        t
+        traned_txt_li
+        to_tran_txt
+        to_tran_txt_pos
+        tset
+        tsave
+      )
 
   [
     traned_txt_li
