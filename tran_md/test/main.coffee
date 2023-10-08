@@ -14,9 +14,9 @@ md = await tranMd(
 )(
   'en'
   join ROOT, 'cache.zh.en'
-  enfp
+  # enfp
 )
-# console.log md
+console.log md
 # write(
 #   enfp
 #   md

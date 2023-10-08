@@ -2,7 +2,7 @@
 
 > ./tranMd.js
   ./merge.js
-  ./cacheTran.js
+  @8n/tran:cacheTran
   ./updateCache.js
   @8n/cache_map:CacheMap
 

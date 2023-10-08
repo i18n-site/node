@@ -3,8 +3,8 @@
 > ./tranMd.js
   @w5/read
   @w5/utf8/utf8d.js
-  ./Hash.js
-  ./noTran.js
+  @8n/tran/Hash.js
+  @8n/tran/noTran.js
 
 update = (
   md_fp
