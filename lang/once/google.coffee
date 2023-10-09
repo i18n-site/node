@@ -1,6 +1,6 @@
 #!/usr/bin/env coffee
 
-> ./zh.coffee
+> ../src/zh.coffee
 
 li = """Afrikaans  af
 Albanian  sq
