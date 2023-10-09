@@ -7,7 +7,7 @@ IMPORT_onI18n = 2
 IMPORT = {}
 
 IMPORT[IMPORT_onMount] = 'import {onMount} from \'svelte\''
-IMPORT[IMPORT_onI18n] = 'import onI18n from \'@8p/lang/_.js\''
+IMPORT[IMPORT_onI18n] = 'import onI18n from \'@8p/lang/onI18n.js\''
 
 
 svelte = (txt)=>

@@ -3,7 +3,6 @@
 > @8n/lang:LANG
   @w5/utf8/utf8e.js
   path > join
-  lodash-es/merge
   @w5/write
   @8n/nt/load.js
   @w5/u8 > u8merge
@@ -34,22 +33,41 @@
     u8merge ...li
   )
 
+  site_fp = join pwd, 'site.nt'
+  if existsSync site_fp
+    site = load site_fp
+  else
+    site = {}
+
+  for lang from lang_set
+    fp = join pwd,lang,'i18n.nt'
+    if existsSync fp
+      g = load fp
+    else
+      g = {}
+    write(
+      join public_dir, lang, '_'
+      pack [
+        g
+        site
+      ]
+    )
   # 编译 nt
-  for f from file_li
-    if f.endsWith '.nt'
-      fp = join pwd, f
-      if existsSync fp
-        g = load fp
-      else
-        g = {}
-      for lang from lang_set
-        write(
-          join public_dir, lang, f.slice(0,-3)
-          pack merge(
-            g
-            load join pwd, lang, f
-          )
-        )
+  # for f from file_li
+  #   if f.endsWith '.nt'
+  #     fp = join pwd, f
+  #     if existsSync fp
+  #       g = load fp
+  #     else
+  #       g = {}
+  #     for lang from lang_set
+  #       write(
+  #         join public_dir, lang, f.slice(0,-3)
+  #         pack merge(
+  #           g
+  #           load join pwd, lang, f
+  #         )
+  #       )
   return
 
 if process.argv[1] == decodeURI (new URL(import.meta.url)).pathname
