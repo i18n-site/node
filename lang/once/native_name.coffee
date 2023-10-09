@@ -1,6 +1,8 @@
 #!/usr/bin/env coffee
 
 > @w5/read
+  @w5/utf8/utf8d
+  @w5/utf8/utf8e
   @w5/uridir
   path > join dirname
   @w5/split
@@ -88,6 +90,8 @@ for {
 
 
 dump = (name, li)=>
+  for i from li
+    i[1] = utf8d utf8e i[1]
   li.sort(
     (a,b)=>
       CODE_ID.get(a[0]) - CODE_ID.get(b[0])
