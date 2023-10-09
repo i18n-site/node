@@ -2,18 +2,23 @@
 
 > @w5/read
   @w5/uridir
-  path > join
+  path > join dirname
   @w5/split
   ../src/zh.coffee
+  @w5/write
 
-CODE = new Set
 
-for i from zh
-  CODE.add i[0]
+CODE = new Map zh
+
+CODE_ID = new Map
+
+for i, p in zh
+  CODE_ID.set i[0],p
 
 ROOT = uridir(import.meta)
-
+SRC = join dirname(ROOT),'src'
 htm = (read join ROOT, 'locale_coverage.html').split('<tr>')
+
 
 en_name_li = []
 native_name_li = []
@@ -29,54 +34,68 @@ for i from htm
     switch code
       when 'zh_Hant'
         code = 'zh-TW'
-
-    if CODE.has code
-      console.log code, en, native_name
+      when 'mni'
+        code = 'mni-Mtei'
+      when 'hnj'
+        code = 'hmn'
+    if CODE.get code
+      en = en.split('>').pop()
+      native_name = native_name.split('>').pop()
+      en_name_li.push [code, en]
+      native_name_li.push [code, native_name]
       CODE.delete code
-console.log CODE
 
-# li = []
-# t = []
-# for i from read(join(ROOT, 'locale.txt')).split('\n')
-#   i = i.trim().slice(3,-4)
-#   if not i
-#     continue
-#   [ k,v ] = split i,':'
-#   if k.endsWith ' Name'
-#     k = k.slice(0,-5)
-#   t.push [k.trim(),v.trim()]
-#   if k == 'English'
-#     li.push t
-#     t = []
-#
-# native_name = []
-# en_name = []
-# push = (id, i)=>
-#   CODE.delete id
-#   for [li, key] from [
-#     [
-#       native_name, 'Native'
-#     ]
-#     [
-#       en_name, 'English'
-#     ]
-#   ]
-#     li.push [
-#       id
-#       split(i.get(key),'(')[0].trim()
-#     ]
-#   return
-#
-# for i from li
-#   if i.length == 3
-#     i = new Map i
-#     id = i.get('Id')
-#     if CODE.has id
-#       push id, i
-#       continue
-#     id = split(id,'-')[0]
-#     if CODE.has id
-#       push id, i
-#
-# console.log CODE
-# console.log native_name.length
+for {
+  code
+  native_name
+  english_name
+} from [
+  {
+    "code": "ay",
+    "english_name": "Aymara",
+    "native_name": "Aymar aru"
+  },
+  {
+    "code": "gom",
+    "english_name": "Konkani",
+    "native_name": "गोंयची कोंकणी"
+  },
+  {
+    "code": "ht",
+    "english_name": "Haitian Creole",
+    "native_name": "Kreyòl ayisyen"
+  },
+  {
+    "code": "lus",
+    "english_name": "Mizo",
+    "native_name": "Mizo ṭawng"
+  },
+  {
+    "code": "sm",
+    "english_name": "Samoan",
+    "native_name": "Gagana fa'a Sāmoa"
+  },
+  {
+    "code": "ilo",
+    "english_name": "Ilokano",
+    "native_name": "Pagsasao Ilokano"
+  }
+]
+  if CODE.get code
+    CODE.delete code
+    en_name_li.push [code, english_name]
+    native_name_li.push [code, native_name]
+
+
+dump = (name, li)=>
+  li.sort(
+    (a,b)=>
+      CODE_ID.get(a[0]) - CODE_ID.get(b[0])
+  )
+  write(
+    join SRC,name+'.js'
+    'export default '+JSON.stringify(li,null,2)
+  )
+
+dump 'index', native_name_li
+dump 'en', en_name_li

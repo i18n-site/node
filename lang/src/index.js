@@ -5,167 +5,415 @@ export default [
   ],
   [
     "zh",
-    "简体中文"
+    "中文"
   ],
   [
     "es",
-    "Español"
-  ],
-  [
-    "ar",
-    "العربية"
-  ],
-  [
-    "pt",
-    "Português (Brasil)"
+    "español"
   ],
   [
     "fr",
-    "Français"
-  ],
-  [
-    "ru",
-    "Русский"
-  ],
-  [
-    "ja",
-    "日本語"
+    "français"
   ],
   [
     "de",
     "Deutsch"
   ],
   [
-    "id",
-    "Indonesia"
+    "ja",
+    "日本語"
+  ],
+  [
+    "it",
+    "italiano"
   ],
   [
     "ko",
     "한국어"
   ],
   [
-    "vi",
-    "Tiếng Việt"
+    "ru",
+    "русский"
   ],
   [
-    "it",
-    "Italiano"
+    "pt",
+    "português"
   ],
   [
-    "tr",
-    "Türkçe"
+    "sq",
+    "shqip"
   ],
   [
-    "fa",
-    "فارسی"
+    "ar",
+    "‫العربية‬"
   ],
   [
-    "th",
-    "ไทย"
+    "am",
+    "አማርኛ"
+  ],
+  [
+    "as",
+    "অসমীয়া"
+  ],
+  [
+    "az",
+    "azərbaycan"
+  ],
+  [
+    "ee",
+    "Eʋegbe"
+  ],
+  [
+    "ay",
+    "Aymar aru"
+  ],
+  [
+    "ga",
+    "Gaeilge"
+  ],
+  [
+    "et",
+    "eesti"
+  ],
+  [
+    "or",
+    "ଓଡ଼ିଆ"
+  ],
+  [
+    "om",
+    "Oromoo"
+  ],
+  [
+    "eu",
+    "euskara"
+  ],
+  [
+    "be",
+    "беларуская"
+  ],
+  [
+    "bm",
+    "bamanakan"
+  ],
+  [
+    "bg",
+    "български"
+  ],
+  [
+    "is",
+    "íslenska"
   ],
   [
     "pl",
-    "Polski"
+    "polski"
+  ],
+  [
+    "bs",
+    "bosanski"
+  ],
+  [
+    "fa",
+    "‫فارسی‬"
+  ],
+  [
+    "bho",
+    "भोजपुरी"
+  ],
+  [
+    "af",
+    "Afrikaans"
+  ],
+  [
+    "tt",
+    "татар"
+  ],
+  [
+    "da",
+    "dansk"
+  ],
+  [
+    "dv",
+    "‫ދިވެހިބަސް‬"
+  ],
+  [
+    "ti",
+    "ትግርኛ"
+  ],
+  [
+    "doi",
+    "डोगरी"
+  ],
+  [
+    "sa",
+    "संस्कृत भाषा"
+  ],
+  [
+    "fil",
+    "Filipino"
+  ],
+  [
+    "fi",
+    "suomi"
+  ],
+  [
+    "fy",
+    "Frysk"
+  ],
+  [
+    "km",
+    "ខ្មែរ"
+  ],
+  [
+    "ka",
+    "ქართული"
+  ],
+  [
+    "gom",
+    "गोंयची कोंकणी"
+  ],
+  [
+    "gu",
+    "ગુજરાતી"
+  ],
+  [
+    "gn",
+    "avañe’ẽ"
+  ],
+  [
+    "kk",
+    "қазақ тілі"
+  ],
+  [
+    "ht",
+    "Kreyòl ayisyen"
+  ],
+  [
+    "ha",
+    "Hausa"
   ],
   [
     "nl",
     "Nederlands"
   ],
   [
-    "uk",
-    "Українська"
+    "ky",
+    "кыргызча"
   ],
   [
-    "ro",
-    "Română"
+    "gl",
+    "galego"
   ],
   [
-    "el",
-    "Ελληνικά"
+    "ca",
+    "català"
   ],
   [
     "cs",
-    "Čeština"
+    "čeština"
   ],
   [
-    "sv",
-    "Svenska"
+    "kn",
+    "ಕನ್ನಡ"
   ],
   [
-    "hu",
-    "Magyar"
-  ],
-  [
-    "fi",
-    "Suomi"
-  ],
-  [
-    "da",
-    "Dansk"
-  ],
-  [
-    "no",
-    "Norsk Bokmål"
-  ],
-  [
-    "bg",
-    "Български"
-  ],
-  [
-    "sk",
-    "Slovenčina"
-  ],
-  [
-    "sr",
-    "Српски (ћирилица)"
-  ],
-  [
-    "lt",
-    "Lietuvių"
-  ],
-  [
-    "lv",
-    "Latviešu"
-  ],
-  [
-    "et",
-    "Eesti"
+    "co",
+    "corsu"
   ],
   [
     "hr",
-    "Hrvatski"
+    "hrvatski"
   ],
   [
-    "sl",
-    "Slovenščina"
+    "qu",
+    "Runasimi"
   ],
   [
-    "mk",
-    "Македонски"
+    "ku",
+    "kurdî"
+  ],
+  [
+    "ckb",
+    "‫کوردیی ناوەندی‬"
+  ],
+  [
+    "la",
+    "Latina"
+  ],
+  [
+    "lv",
+    "latviešu"
+  ],
+  [
+    "lo",
+    "ລາວ"
+  ],
+  [
+    "lt",
+    "lietuvių"
+  ],
+  [
+    "ln",
+    "lingála"
+  ],
+  [
+    "lg",
+    "Luganda"
+  ],
+  [
+    "lb",
+    "Lëtzebuergesch"
+  ],
+  [
+    "rw",
+    "Kinyarwanda"
+  ],
+  [
+    "ro",
+    "română"
+  ],
+  [
+    "mg",
+    "Malagasy"
+  ],
+  [
+    "mt",
+    "Malti"
+  ],
+  [
+    "mr",
+    "मराठी"
+  ],
+  [
+    "ml",
+    "മലയാളം"
   ],
   [
     "ms",
     "Melayu"
   ],
   [
-    "hi",
-    "हिन्दी"
+    "mk",
+    "македонски"
+  ],
+  [
+    "mai",
+    "मैथिली"
+  ],
+  [
+    "mi",
+    "Māori"
+  ],
+  [
+    "mni-Mtei",
+    "মৈতৈলোন্"
+  ],
+  [
+    "mn",
+    "монгол"
   ],
   [
     "bn",
     "বাংলা"
   ],
   [
-    "ur",
-    "اردو"
+    "lus",
+    "Mizo ṭawng"
+  ],
+  [
+    "my",
+    "မြန်မာ"
+  ],
+  [
+    "hmn",
+    "𞄀𞄄𞄰𞄩𞄍𞄜𞄰"
+  ],
+  [
+    "xh",
+    "IsiXhosa"
+  ],
+  [
+    "zu",
+    "isiZulu"
+  ],
+  [
+    "ne",
+    "नेपाली"
+  ],
+  [
+    "no",
+    "norsk"
+  ],
+  [
+    "pa",
+    "ਪੰਜਾਬੀ"
+  ],
+  [
+    "ps",
+    "‫پښتو‬"
+  ],
+  [
+    "ny",
+    "Nyanja"
+  ],
+  [
+    "ak",
+    "Akan"
+  ],
+  [
+    "sv",
+    "svenska"
+  ],
+  [
+    "sm",
+    "Gagana fa'a Sāmoa"
+  ],
+  [
+    "sr",
+    "српски"
+  ],
+  [
+    "nso",
+    "Sesotho sa Leboa"
+  ],
+  [
+    "st",
+    "Sesotho"
+  ],
+  [
+    "si",
+    "සිංහල"
+  ],
+  [
+    "eo",
+    "esperanto"
+  ],
+  [
+    "sk",
+    "slovenčina"
+  ],
+  [
+    "sl",
+    "slovenščina"
   ],
   [
     "sw",
     "Kiswahili"
   ],
   [
-    "ml",
-    "മലയാളം"
+    "gd",
+    "Gàidhlig"
+  ],
+  [
+    "ceb",
+    "Cebuano"
+  ],
+  [
+    "so",
+    "Soomaali"
+  ],
+  [
+    "tg",
+    "тоҷикӣ"
   ],
   [
     "te",
@@ -176,239 +424,107 @@ export default [
     "தமிழ்"
   ],
   [
-    "mr",
-    "मराठी"
+    "th",
+    "ไทย"
   ],
   [
-    "pa",
-    "ਪੰਜਾਬੀ"
-  ],
-  [
-    "gu",
-    "ગુજરાતી"
-  ],
-  [
-    "kn",
-    "ಕನ್ನಡ"
-  ],
-  [
-    "or",
-    "ଓଡ଼ିଆ"
-  ],
-  [
-    "my",
-    "မြန်မာ"
-  ],
-  [
-    "ne",
-    "नेपाली"
-  ],
-  [
-    "si",
-    "සිංහල"
-  ],
-  [
-    "km",
-    "ខ្មែរ"
-  ],
-  [
-    "lo",
-    "ລາວ"
-  ],
-  [
-    "hy",
-    "Հայերեն"
-  ],
-  [
-    "az",
-    "Azərbaycan"
-  ],
-  [
-    "uz",
-    "Uzbek (Latin)"
-  ],
-  [
-    "kk",
-    "Қазақ Тілі"
-  ],
-  [
-    "ky",
-    "Кыргызча"
-  ],
-  [
-    "ka",
-    "ქართული"
+    "tr",
+    "Türkçe"
   ],
   [
     "tk",
-    "Türkmen Dili"
-  ],
-  [
-    "ps",
-    "پښتو"
-  ],
-  [
-    "sd",
-    "سنڌي"
-  ],
-  [
-    "am",
-    "አማርኛ"
-  ],
-  [
-    "ha",
-    "Hausa"
-  ],
-  [
-    "ig",
-    "Ásụ̀sụ́ Ìgbò"
-  ],
-  [
-    "yo",
-    "Èdè Yorùbá"
-  ],
-  [
-    "sn",
-    "chiShona"
-  ],
-  [
-    "so",
-    "Soomaali"
-  ],
-  [
-    "mg",
-    "Malagasy"
-  ],
-  [
-    "st",
-    "Sesotho"
-  ],
-  [
-    "rw",
-    "Kinyarwanda"
-  ],
-  [
-    "ln",
-    "Lingála"
-  ],
-  [
-    "xh",
-    "isiXhosa"
-  ],
-  [
-    "zu",
-    "Isi-Zulu"
-  ],
-  [
-    "af",
-    "Afrikaans"
+    "türkmen dili"
   ],
   [
     "cy",
     "Cymraeg"
   ],
   [
-    "mt",
-    "Malti"
-  ],
-  [
-    "ga",
-    "Gaeilge"
-  ],
-  [
-    "gl",
-    "Galego"
-  ],
-  [
-    "eu",
-    "Euskara"
-  ],
-  [
-    "is",
-    "Íslenska"
-  ],
-  [
-    "bs",
-    "Bosnian"
-  ],
-  [
-    "sq",
-    "Shqip"
-  ],
-  [
-    "ht",
-    "Haitian Creole"
-  ],
-  [
-    "sm",
-    "Gagana Sāmoa"
-  ],
-  [
-    "mi",
-    "Te Reo Māori"
-  ],
-  [
-    "hmn",
-    "Hmong Daw"
-  ],
-  [
-    "ti",
-    "ትግር"
-  ],
-  [
-    "dv",
-    "ދިވެހިބަސް"
-  ],
-  [
-    "gom",
-    "Konkani"
-  ],
-  [
-    "mai",
-    "Maithili"
-  ],
-  [
-    "ckb",
-    "Kurdî (Navîn)"
-  ],
-  [
-    "ku",
-    "Kurdî (Bakur)"
-  ],
-  [
-    "tt",
-    "Татар"
-  ],
-  [
     "ug",
-    "ئۇيغۇرچە"
+    "‫ئۇيغۇرچە‬"
   ],
   [
-    "as",
-    "অসমীয়া"
+    "ur",
+    "‫اردو‬"
   ],
   [
-    "ca",
-    "Català"
+    "uk",
+    "українська"
   ],
   [
-    "iw",
-    "עברית"
+    "uz",
+    "o‘zbek"
   ],
   [
-    "mn",
-    "Mongolian (Cyrillic)"
+    "he",
+    "‫עברית‬"
   ],
   [
-    "nso",
-    "Sesotho sa Leboa"
+    "el",
+    "Ελληνικά"
   ],
   [
-    "fil",
-    "Filipino"
+    "haw",
+    "ʻŌlelo Hawaiʻi"
+  ],
+  [
+    "sd",
+    "‫سنڌي‬"
+  ],
+  [
+    "hu",
+    "magyar"
+  ],
+  [
+    "sn",
+    "chiShona"
+  ],
+  [
+    "hy",
+    "հայերեն"
+  ],
+  [
+    "ig",
+    "Igbo"
+  ],
+  [
+    "ilo",
+    "Pagsasao Ilokano"
+  ],
+  [
+    "yi",
+    "‫ייִדיש‬"
+  ],
+  [
+    "hi",
+    "हिन्दी"
+  ],
+  [
+    "su",
+    "Basa Sunda"
+  ],
+  [
+    "id",
+    "Indonesia"
+  ],
+  [
+    "jv",
+    "Jawa"
+  ],
+  [
+    "yo",
+    "Èdè Yorùbá"
+  ],
+  [
+    "vi",
+    "Tiếng Việt"
   ],
   [
     "zh-TW",
-    "正體中文"
+    "繁體中文"
+  ],
+  [
+    "ts",
+    "Xitsonga"
   ]
 ]
