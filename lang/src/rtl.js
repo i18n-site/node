@@ -1,1 +1,3 @@
-export default new Set('ar dv fa he ckb ps ug ur'.split(' '))
+export default new Set('ar ckb dv fa he ps sd ug ur yi'.split(' '))
+
+                      

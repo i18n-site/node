@@ -92,7 +92,8 @@ for {
 dump = (name, li)=>
   for i from li
     i[1] = utf8d(utf8e i[1]).trim()
-    console.log i[1]
+    if i[1].startsWith '\u202b'
+      console.log i[0]
   li.sort(
     (a,b)=>
       CODE_ID.get(a[0]) - CODE_ID.get(b[0])
