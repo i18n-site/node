@@ -142,5 +142,7 @@ for i from zh
 li = li.split('\n')
 for i from li
   code = i.split(' ').pop()
+  if code == 'tl' # 都是菲律宾语
+    code = 'fil'
   if not exist.has code
     console.log code
