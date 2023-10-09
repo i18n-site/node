@@ -404,7 +404,7 @@ export default [
     "Sesotho sa Leboa"
   ],
   [
-    "tl",
+    "fil",
     "Filipino"
   ],
   [
