@@ -84,7 +84,7 @@ export default [
     "Finnish"
   ],
   [
-    "tl",
+    "fil",
     "Filipino"
   ],
   [
