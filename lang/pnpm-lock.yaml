@@ -10,6 +10,9 @@ dependencies:
     version: 0.0.1
 
 devDependencies:
+  '@w5/split':
+    specifier: ^0.0.1
+    version: 0.0.1
   '@w5/tran':
     specifier: ^0.0.6
     version: 0.0.6
@@ -100,6 +103,10 @@ packages:
 
   /@w5/sleep@0.0.1:
     resolution: {integrity: sha512-GjLtl9qx0bYhJO9kUIHkkmaApa6Uvqr93sPYg6obAxSR5+OKYtRTqC+fZZ0gMov+TKchNGvZFKSS7slA3BAVPw==}
+    dev: true
+
+  /@w5/split@0.0.1:
+    resolution: {integrity: sha512-02aOfR5SGClD1mqXAxjYETLkD62x8PBPKNPLLHJfO9oA0rah9xrJ5VEu3WtBK6whz7bc7QL//777tUgDUJ4AaQ==}
     dev: true
 
   /@w5/tran@0.0.6:

@@ -1,0 +1,456 @@
+<p>Id: Compatibility</p>
+<p>Native Name: Compatibility</p>
+<p>English Name: Compatibility</p>
+<p>Id: prs-AF</p>
+<p>Native Name: prs (افغانستان)</p>
+<p>English Name: prs (Afghanistan)</p>
+<p>Id: ps-AF</p>
+<p>Native Name: پښتو (افغانستان)</p>
+<p>English Name: Pashto (Afghanistan)</p>
+<p>Id: ar-DZ</p>
+<p>Native Name: العربية (الجزائر)</p>
+<p>English Name: Arabic (Algeria)</p>
+<p>Id: ln-AO</p>
+<p>Native Name: lingála (Angóla)</p>
+<p>English Name: Lingala (Angola)</p>
+<p>Id: pt-AO</p>
+<p>Native Name: português (Angola)</p>
+<p>English Name: Portuguese (Angola)</p>
+<p>Id: es-AR</p>
+<p>Native Name: español (Argentina)</p>
+<p>English Name: Spanish (Argentina)</p>
+<p>Id: hy-AM</p>
+<p>Native Name: հայերեն (Հայաստան)</p>
+<p>English Name: Armenian (Armenia)</p>
+<p>Id: nl-AW</p>
+<p>Native Name: Nederlands (Aruba)</p>
+<p>English Name: Dutch (Aruba)</p>
+<p>Id: en-AU</p>
+<p>Native Name: English (Australia)</p>
+<p>English Name: English (Australia)</p>
+<p>Id: de-AT</p>
+<p>Native Name: Deutsch (Österreich)</p>
+<p>English Name: German (Austria)</p>
+<p>Id: az-Cyrl-AZ</p>
+<p>Native Name: азәрбајҹан (Кирил, Азәрбајҹан)</p>
+<p>English Name: Azerbaijani (Cyrillic, Azerbaijan)</p>
+<p>Id: az-Latn-AZ</p>
+<p>Native Name: azərbaycan (latın, Azərbaycan)</p>
+<p>English Name: Azerbaijani (Latin, Azerbaijan)</p>
+<p>Id: ar-BH</p>
+<p>Native Name: العربية (البحرين)</p>
+<p>English Name: Arabic (Bahrain)</p>
+<p>Id: en-BH</p>
+<p>Native Name: English (Bahrain)</p>
+<p>English Name: English (Bahrain)</p>
+<p>Id: nl-BE</p>
+<p>Native Name: Nederlands (België)</p>
+<p>English Name: Dutch (Belgium)</p>
+<p>Id: en-BE</p>
+<p>Native Name: English (Belgium)</p>
+<p>English Name: English (Belgium)</p>
+<p>Id: fr-BE</p>
+<p>Native Name: français (Belgique)</p>
+<p>English Name: French (Belgium)</p>
+<p>Id: es-BO</p>
+<p>Native Name: español (Bolivia)</p>
+<p>English Name: Spanish (Bolivia)</p>
+<p>Id: tn-BW</p>
+<p>Native Name: tn (BW)</p>
+<p>English Name: Setswana (Botswana)</p>
+<p>Id: en-BR</p>
+<p>Native Name: English (Brazil)</p>
+<p>English Name: English (Brazil)</p>
+<p>Id: pt-BR</p>
+<p>Native Name: português (Brasil)</p>
+<p>English Name: Portuguese (Brazil)</p>
+<p>Id: ms-BN</p>
+<p>Native Name: Melayu (Brunei)</p>
+<p>English Name: Malay (Brunei)</p>
+<p>Id: bg-BG</p>
+<p>Native Name: български (България)</p>
+<p>English Name: Bulgarian (Bulgaria)</p>
+<p>Id: fr-CM</p>
+<p>Native Name: français (Cameroun)</p>
+<p>English Name: French (Cameroon)</p>
+<p>Id: en-CA</p>
+<p>Native Name: English (Canada)</p>
+<p>English Name: English (Canada)</p>
+<p>Id: fr-CA</p>
+<p>Native Name: français (Canada)</p>
+<p>English Name: French (Canada)</p>
+<p>Id: es-CL</p>
+<p>Native Name: español (Chile)</p>
+<p>English Name: Spanish (Chile)</p>
+<p>Id: zh-CN</p>
+<p>Native Name: 中文(简体)（中国）</p>
+<p>English Name: Chinese (China)</p>
+<p>Id: es-CO</p>
+<p>Native Name: español (Colombia)</p>
+<p>English Name: Spanish (Colombia)</p>
+<p>Id: fr-CD</p>
+<p>Native Name: français (Congo [République démocratique du])</p>
+<p>English Name: French (Congo [DRC])</p>
+<p>Id: es-CR</p>
+<p>Native Name: español (Costa Rica)</p>
+<p>English Name: Spanish (Costa Rica)</p>
+<p>Id: fr-CI</p>
+<p>Native Name: français (Côte d’Ivoire)</p>
+<p>English Name: French (Côte d’Ivoire)</p>
+<p>Id: hr-HR</p>
+<p>Native Name: hrvatski (Hrvatska)</p>
+<p>English Name: Croatian (Croatia)</p>
+<p>Id: nl-CW</p>
+<p>Native Name: Nederlands (Curaçao)</p>
+<p>English Name: Dutch (Curaçao)</p>
+<p>Id: cs-CZ</p>
+<p>Native Name: čeština (Česko)</p>
+<p>English Name: Czech (Czechia)</p>
+<p>Id: da-DK</p>
+<p>Native Name: dansk (Danmark)</p>
+<p>English Name: Danish (Denmark)</p>
+<p>Id: es-DO</p>
+<p>Native Name: español (República Dominicana)</p>
+<p>English Name: Spanish (Dominican Republic)</p>
+<p>Id: es-EC</p>
+<p>Native Name: español (Ecuador)</p>
+<p>English Name: Spanish (Ecuador)</p>
+<p>Id: ar-EG</p>
+<p>Native Name: العربية (مصر)</p>
+<p>English Name: Arabic (Egypt)</p>
+<p>Id: es-SV</p>
+<p>Native Name: español (El Salvador)</p>
+<p>English Name: Spanish (El Salvador)</p>
+<p>Id: am-ET</p>
+<p>Native Name: አማርኛ (ኢትዮጵያ)</p>
+<p>English Name: Amharic (Ethiopia)</p>
+<p>Id: om-ET</p>
+<p>Native Name: Oromoo (Itoophiyaa)</p>
+<p>English Name: Oromo (Ethiopia)</p>
+<p>Id: ti-ET</p>
+<p>Native Name: ትግርኛ (ኢትዮጵያ)</p>
+<p>English Name: Tigrinya (Ethiopia)</p>
+<p>Id: fi-FI</p>
+<p>Native Name: suomi (Suomi)</p>
+<p>English Name: Finnish (Finland)</p>
+<p>Id: fr-FR</p>
+<p>Native Name: français (France)</p>
+<p>English Name: French (France)</p>
+<p>Id: ka-GE</p>
+<p>Native Name: ქართული (საქართველო)</p>
+<p>English Name: Georgian (Georgia)</p>
+<p>Id: en-DE</p>
+<p>Native Name: English (Germany)</p>
+<p>English Name: English (Germany)</p>
+<p>Id: de-DE</p>
+<p>Native Name: Deutsch (Deutschland)</p>
+<p>English Name: German (Germany)</p>
+<p>Id: el-GR</p>
+<p>Native Name: Ελληνικά (Ελλάδα)</p>
+<p>English Name: Greek (Greece)</p>
+<p>Id: es-GT</p>
+<p>Native Name: español (Guatemala)</p>
+<p>English Name: Spanish (Guatemala)</p>
+<p>Id: es-HN</p>
+<p>Native Name: español (Honduras)</p>
+<p>English Name: Spanish (Honduras)</p>
+<p>Id: en-HK</p>
+<p>Native Name: English (Hong Kong SAR)</p>
+<p>English Name: English (Hong Kong SAR)</p>
+<p>Id: zh-HK</p>
+<p>Native Name: 中文(繁體)（香港特別行政區）</p>
+<p>English Name: Chinese (Hong Kong SAR)</p>
+<p>Id: hu-HU</p>
+<p>Native Name: magyar (Magyarország)</p>
+<p>English Name: Hungarian (Hungary)</p>
+<p>Id: id-ID</p>
+<p>Native Name: Indonesia (Indonesia)</p>
+<p>English Name: Indonesian (Indonesia)</p>
+<p>Id: fa-IR</p>
+<p>Native Name: فارسی (ایران)</p>
+<p>English Name: Persian (Iran)</p>
+<p>Id: en-IE</p>
+<p>Native Name: English (Ireland)</p>
+<p>English Name: English (Ireland)</p>
+<p>Id: ga-IE</p>
+<p>Native Name: Gaeilge (Éire)</p>
+<p>English Name: Irish (Ireland)</p>
+<p>Id: he-IL</p>
+<p>Native Name: עברית (ישראל)</p>
+<p>English Name: Hebrew (Israel)</p>
+<p>Id: bn-IN</p>
+<p>Native Name: বাংলা (ভারত)</p>
+<p>English Name: Bangla (India)</p>
+<p>Id: en-IN</p>
+<p>Native Name: English (India)</p>
+<p>English Name: English (India)</p>
+<p>Id: gu-IN</p>
+<p>Native Name: ગુજરાતી (ભારત)</p>
+<p>English Name: Gujarati (India)</p>
+<p>Id: hi-IN</p>
+<p>Native Name: हिन्दी (भारत)</p>
+<p>English Name: Hindi (India)</p>
+<p>Id: kn-IN</p>
+<p>Native Name: ಕನ್ನಡ (ಭಾರತ)</p>
+<p>English Name: Kannada (India)</p>
+<p>Id: ml-IN</p>
+<p>Native Name: മലയാളം (ഇന്ത്യ)</p>
+<p>English Name: Malayalam (India)</p>
+<p>Id: mr-IN</p>
+<p>Native Name: मराठी (भारत)</p>
+<p>English Name: Marathi (India)</p>
+<p>Id: ta-IN</p>
+<p>Native Name: தமிழ் (இந்தியா)</p>
+<p>English Name: Tamil (India)</p>
+<p>Id: te-IN</p>
+<p>Native Name: తెలుగు (భారతదేశం)</p>
+<p>English Name: Telugu (India)</p>
+<p>Id: ar-IQ</p>
+<p>Native Name: العربية (العراق)</p>
+<p>English Name: Arabic (Iraq)</p>
+<p>Id: it-IT</p>
+<p>Native Name: italiano (Italia)</p>
+<p>English Name: Italian (Italy)</p>
+<p>Id: ja-JP</p>
+<p>Native Name: 日本語 (日本)</p>
+<p>English Name: Japanese (Japan)</p>
+<p>Id: ar-JO</p>
+<p>Native Name: العربية (الأردن)</p>
+<p>English Name: Arabic (Jordan)</p>
+<p>Id: en-KE</p>
+<p>Native Name: English (Kenya)</p>
+<p>English Name: English (Kenya)</p>
+<p>Id: sw-KE</p>
+<p>Native Name: Kiswahili (Kenya)</p>
+<p>English Name: Kiswahili (Kenya)</p>
+<p>Id: ko-KR</p>
+<p>Native Name: 한국어(대한민국)</p>
+<p>English Name: Korean (Korea)</p>
+<p>Id: ar-KW</p>
+<p>Native Name: العربية (الكويت)</p>
+<p>English Name: Arabic (Kuwait)</p>
+<p>Id: es-XL</p>
+<p>Native Name: español (XL)</p>
+<p>English Name: Spanish (XL)</p>
+<p>Id: es-419</p>
+<p>Native Name: español (Latinoamérica)</p>
+<p>English Name: Spanish (Latin America)</p>
+<p>Id: lv-LV</p>
+<p>Native Name: latviešu (Latvija)</p>
+<p>English Name: Latvian (Latvia)</p>
+<p>Id: ar-LB</p>
+<p>Native Name: العربية (لبنان)</p>
+<p>English Name: Arabic (Lebanon)</p>
+<p>Id: ar-LY</p>
+<p>Native Name: العربية (ليبيا)</p>
+<p>English Name: Arabic (Libya)</p>
+<p>Id: de-LI</p>
+<p>Native Name: Deutsch (Liechtenstein)</p>
+<p>English Name: German (Liechtenstein)</p>
+<p>Id: lt-LT</p>
+<p>Native Name: lietuvių (Lietuva)</p>
+<p>English Name: Lithuanian (Lithuania)</p>
+<p>Id: fr-LU</p>
+<p>Native Name: français (Luxembourg)</p>
+<p>English Name: French (Luxembourg)</p>
+<p>Id: de-LU</p>
+<p>Native Name: Deutsch (Luxemburg)</p>
+<p>English Name: German (Luxembourg)</p>
+<p>Id: zh-MY</p>
+<p>Native Name: 中文（马来西亚）</p>
+<p>English Name: Chinese (Malaysia)</p>
+<p>Id: en-MY</p>
+<p>Native Name: English (Malaysia)</p>
+<p>English Name: English (Malaysia)</p>
+<p>Id: ms-MY</p>
+<p>Native Name: Melayu (Malaysia)</p>
+<p>English Name: Malay (Malaysia)</p>
+<p>Id: fr-ML</p>
+<p>Native Name: français (Mali)</p>
+<p>English Name: French (Mali)</p>
+<p>Id: es-MX</p>
+<p>Native Name: español (México)</p>
+<p>English Name: Spanish (Mexico)</p>
+<p>Id: mn-MN</p>
+<p>Native Name: монгол (Монгол)</p>
+<p>English Name: Mongolian (Mongolia)</p>
+<p>Id: ar-MA</p>
+<p>Native Name: العربية (المغرب)</p>
+<p>English Name: Arabic (Morocco)</p>
+<p>Id: fr-MA</p>
+<p>Native Name: français (Maroc)</p>
+<p>English Name: French (Morocco)</p>
+<p>Id: pt-MZ</p>
+<p>Native Name: português (Moçambique)</p>
+<p>English Name: Portuguese (Mozambique)</p>
+<p>Id: my-MM</p>
+<p>Native Name: မြန်မာ (မြန်မာ)</p>
+<p>English Name: Burmese (Myanmar)</p>
+<p>Id: nl-NL</p>
+<p>Native Name: Nederlands (Nederland)</p>
+<p>English Name: Dutch (Netherlands)</p>
+<p>Id: en-NZ</p>
+<p>Native Name: English (New Zealand)</p>
+<p>English Name: English (New Zealand)</p>
+<p>Id: es-NI</p>
+<p>Native Name: español (Nicaragua)</p>
+<p>English Name: Spanish (Nicaragua)</p>
+<p>Id: ha-Latn-NG</p>
+<p>Native Name: Hausa (Latn, Najeriya)</p>
+<p>English Name: Hausa (Latin, Nigeria)</p>
+<p>Id: ig-NG</p>
+<p>Native Name: Igbo (Naịjịrịa)</p>
+<p>English Name: Igbo (Nigeria)</p>
+<p>Id: yo-NG</p>
+<p>Native Name: Èdè Yorùbá (Orílẹ́ède Nàìjíríà)</p>
+<p>English Name: Yoruba (Nigeria)</p>
+<p>Id: en-NO</p>
+<p>Native Name: English (Norway)</p>
+<p>English Name: English (Norway)</p>
+<p>Id: nb-NO</p>
+<p>Native Name: norsk bokmål (Norge)</p>
+<p>English Name: Norwegian Bokmål (Norway)</p>
+<p>Id: nn-NO</p>
+<p>Native Name: nynorsk (Noreg)</p>
+<p>English Name: Norwegian Nynorsk (Norway)</p>
+<p>Id: ar-OM</p>
+<p>Native Name: العربية (عُمان)</p>
+<p>English Name: Arabic (Oman)</p>
+<p>Id: es-PA</p>
+<p>Native Name: español (Panamá)</p>
+<p>English Name: Spanish (Panama)</p>
+<p>Id: es-PY</p>
+<p>Native Name: español (Paraguay)</p>
+<p>English Name: Spanish (Paraguay)</p>
+<p>Id: es-PE</p>
+<p>Native Name: español (Perú)</p>
+<p>English Name: Spanish (Peru)</p>
+<p>Id: en-PH</p>
+<p>Native Name: English (Philippines)</p>
+<p>English Name: English (Philippines)</p>
+<p>Id: fil-PH</p>
+<p>Native Name: Filipino (Pilipinas)</p>
+<p>English Name: Filipino (Philippines)</p>
+<p>Id: pl-PL</p>
+<p>Native Name: polski (Polska)</p>
+<p>English Name: Polish (Poland)</p>
+<p>Id: pt-PT</p>
+<p>Native Name: português (Portugal)</p>
+<p>English Name: Portuguese (Portugal)</p>
+<p>Id: ar-QA</p>
+<p>Native Name: العربية (قطر)</p>
+<p>English Name: Arabic (Qatar)</p>
+<p>Id: ro-RO</p>
+<p>Native Name: română (România)</p>
+<p>English Name: Romanian (Romania)</p>
+<p>Id: ru-RU</p>
+<p>Native Name: русский (Россия)</p>
+<p>English Name: Russian (Russia)</p>
+<p>Id: rw-RW</p>
+<p>Native Name: Kinyarwanda (U Rwanda)</p>
+<p>English Name: Kinyarwanda (Rwanda)</p>
+<p>Id: ar-SA</p>
+<p>Native Name: العربية (المملكة العربية السعودية)</p>
+<p>English Name: Arabic (Saudi Arabia)</p>
+<p>Id: ff-Latn-SN</p>
+<p>Native Name: Pulaar (Latn, Senegaal)</p>
+<p>English Name: Fulah (Latin, Senegal)</p>
+<p>Id: fr-SN</p>
+<p>Native Name: français (Sénégal)</p>
+<p>English Name: French (Senegal)</p>
+<p>Id: sr-Cyrl-RS</p>
+<p>Native Name: српски (ћирилица, Србија)</p>
+<p>English Name: Serbian (Cyrillic, Serbia)</p>
+<p>Id: sr-Latn-RS</p>
+<p>Native Name: srpski (latinica, Srbija)</p>
+<p>English Name: Serbian (Latin, Serbia)</p>
+<p>Id: sr-RS</p>
+<p>Native Name: српски (Србија)</p>
+<p>English Name: Serbian (Serbia)</p>
+<p>Id: en-SG</p>
+<p>Native Name: English (Singapore)</p>
+<p>English Name: English (Singapore)</p>
+<p>Id: sk-SK</p>
+<p>Native Name: slovenčina (Slovensko)</p>
+<p>English Name: Slovak (Slovakia)</p>
+<p>Id: sl-SI</p>
+<p>Native Name: slovenščina (Slovenija)</p>
+<p>English Name: Slovenian (Slovenia)</p>
+<p>Id: en-ZA</p>
+<p>Native Name: English (South Africa)</p>
+<p>English Name: English (South Africa)</p>
+<p>Id: es-ES</p>
+<p>Native Name: español (España)</p>
+<p>English Name: Spanish (Spain)</p>
+<p>Id: en-LK</p>
+<p>Native Name: English (Sri Lanka)</p>
+<p>English Name: English (Sri Lanka)</p>
+<p>Id: si-LK</p>
+<p>Native Name: සිංහල (ශ්‍රී ලංකාව)</p>
+<p>English Name: Sinhala (Sri Lanka)</p>
+<p>Id: ta-LK</p>
+<p>Native Name: தமிழ் (இலங்கை)</p>
+<p>English Name: Tamil (Sri Lanka)</p>
+<p>Id: ca-ES</p>
+<p>Native Name: català (Espanya)</p>
+<p>English Name: Catalan (Spain)</p>
+<p>Id: sv-SE</p>
+<p>Native Name: svenska (Sverige)</p>
+<p>English Name: Swedish (Sweden)</p>
+<p>Id: de-CH</p>
+<p>Native Name: Deutsch (Schweiz)</p>
+<p>English Name: German (Switzerland)</p>
+<p>Id: fr-CH</p>
+<p>Native Name: français (Suisse)</p>
+<p>English Name: French (Switzerland)</p>
+<p>Id: it-CH</p>
+<p>Native Name: italiano (Svizzera)</p>
+<p>English Name: Italian (Switzerland)</p>
+<p>Id: ar-SY</p>
+<p>Native Name: العربية (سوريا)</p>
+<p>English Name: Arabic (Syria)</p>
+<p>Id: zh-TW</p>
+<p>Native Name: 中文(繁體)（台灣）</p>
+<p>English Name: Chinese (Taiwan)</p>
+<p>Id: en-TZ</p>
+<p>Native Name: English (Tanzania)</p>
+<p>English Name: English (Tanzania)</p>
+<p>Id: sw-TZ</p>
+<p>Native Name: Kiswahili (Tanzania)</p>
+<p>English Name: Kiswahili (Tanzania)</p>
+<p>Id: th-TH</p>
+<p>Native Name: ไทย (ไทย)</p>
+<p>English Name: Thai (Thailand)</p>
+<p>Id: ar-TN</p>
+<p>Native Name: العربية (تونس)</p>
+<p>English Name: Arabic (Tunisia)</p>
+<p>Id: tr-TR</p>
+<p>Native Name: Türkçe (Türkiye)</p>
+<p>English Name: Turkish (Turkey)</p>
+<p>Id: uk-UA</p>
+<p>Native Name: українська (Україна)</p>
+<p>English Name: Ukrainian (Ukraine)</p>
+<p>Id: ar-AE</p>
+<p>Native Name: العربية (الإمارات العربية المتحدة)</p>
+<p>English Name: Arabic (United Arab Emirates)</p>
+<p>Id: en-GB</p>
+<p>Native Name: English (United Kingdom)</p>
+<p>English Name: English (United Kingdom)</p>
+<p>Id: en-US</p>
+<p>Native Name: English (United States)</p>
+<p>English Name: English (United States)</p>
+<p>Id: es-US</p>
+<p>Native Name: español (Estados Unidos)</p>
+<p>English Name: Spanish (United States)</p>
+<p>Id: es-UY</p>
+<p>Native Name: español (Uruguay)</p>
+<p>English Name: Spanish (Uruguay)</p>
+<p>Id: es-VE</p>
+<p>Native Name: español (Venezuela)</p>
+<p>English Name: Spanish (Venezuela)</p>
+<p>Id: vi-VN</p>
+<p>Native Name: Tiếng Việt (Việt Nam)</p>
+<p>English Name: Vietnamese (Vietnam)</p>
+<p>Id: ar-YE</p>
+<p>Native Name: العربية (اليمن)</p>
+<p>English Name: Arabic (Yemen)</p>

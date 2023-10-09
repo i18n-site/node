@@ -13,6 +13,7 @@
     "lib/*"
   ],
   "devDependencies": {
+    "@w5/split": "^0.0.1",
     "@w5/tran": "^0.0.6",
     "@w5/write": "^0.0.1",
     "json5": "^2.2.3"
