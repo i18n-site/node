@@ -4,7 +4,7 @@
   @w5/uridir
   path > join
   @w5/split
-  ../lib/zh.js
+  ../src/zh.coffee
 
 CODE = new Set
 
