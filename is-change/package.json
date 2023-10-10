@@ -16,7 +16,7 @@
   "scripts": {},
   "type": "module",
   "dependencies": {
-    "@w5/binmap": "^0.0.5",
+    "@w5/binmap": "^0.0.7",
     "@w5/u8": "^0.0.3",
     "@w5/write": "^0.0.1",
     "@w5/xxhash3-wasm": "^0.0.6",

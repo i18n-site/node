@@ -15,7 +15,7 @@
   "scripts": {},
   "type": "module",
   "dependencies": {
-    "@8n/lang": "^0.0.2",
+    "@8n/lang": "^0.0.6",
     "@8n/nt": "^0.0.12",
     "@w5/msgpack": "^0.0.2",
     "@w5/u8": "^0.0.3",

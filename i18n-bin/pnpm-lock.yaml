@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   '@8n/lang':
-    specifier: ^0.0.2
-    version: 0.0.2
+    specifier: ^0.0.6
+    version: 0.0.6
   '@8n/nt':
     specifier: ^0.0.12
     version: 0.0.12
@@ -29,8 +29,10 @@ dependencies:
 
 packages:
 
-  /@8n/lang@0.0.2:
-    resolution: {integrity: sha512-6Nd7Dz8Pdj2xPDhjlpfgsBnKn4swIFfkDjHdcmPq85Zdt/fIWIzmmUGg3SMmLmSD+bILmkYIdn2jszlyz3qS5A==}
+  /@8n/lang@0.0.6:
+    resolution: {integrity: sha512-dQT+NqVh+9seAPrZZBqcHJ1H3sGnZRGrCjgfsru2uVwt0mkqjIc+AsjgfzFhvFwYNMFipA0w75FABGuwr+sLAw==}
+    dependencies:
+      '@w5/uridir': 0.0.1
     dev: false
 
   /@8n/nt@0.0.12:
@@ -100,6 +102,10 @@ packages:
 
   /@w5/u8@0.0.3:
     resolution: {integrity: sha512-2AGCc0Doaa6iYhcXCaTtOJkKSN/FDuolqj/5eo5/pI9hUYBgFW+juci7v9qc5J2Rm9abOYIa2uND9oaJXhsnBw==}
+    dev: false
+
+  /@w5/uridir@0.0.1:
+    resolution: {integrity: sha512-5ZNTzgVhQHvfI1apigB10XTPjTg5KgMRxdRzda3nUrRTVvzOW1b5fVkFBwv6iqDurNJIe2jiGL97Ge1445p9/g==}
     dev: false
 
   /@w5/utf8@0.0.3:
