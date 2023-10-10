@@ -45,7 +45,7 @@ cacheNt = cache load
     for to from (await tran(from_lang, to_lang, [], vli))[1]
       to_nt[kli[n]] = to
       bar()
-      bar.log '  '+vli[n],'→',to
+      bar.log from_lang+' → '+to_lang+' '+vli[n]+' → '+to
       ++n
 
     dump(
@@ -53,5 +53,4 @@ cacheNt = cache load
       to_nt
     )
   msave()
-  # console.log to_lang, from_lang, kli, vli
   return

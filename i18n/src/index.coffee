@@ -43,6 +43,9 @@ I18N_NT = 'i18n.nt'
     r
 
   bar = Bar to_from.length
+
+  ing = []
+  + pre_lang
   for [to_lang,from_lang] from to_from
     bar()
     from_dir = join pwd, from_lang
@@ -73,15 +76,23 @@ I18N_NT = 'i18n.nt'
         to_fp = join pwd, to_rel
         from_change = isChange(from_rel)
         if from_change or isChange(to_rel)
-          bar.log from_lang, '→', to_lang
-          await func(
-            pwd
-            fp
-            to_lang
-            from_lang
-            from_change
-          )
-          changed.add to_rel
+          loop
+            if from_lang == pre_lang
+              ing.push func(
+                pwd
+                fp
+                to_lang
+                from_lang
+                from_change
+              )
+              changed.add to_rel
+              break
+            else
+              await Promise.all ing
+              ing = []
+              pre_lang = from_lang
+
+  await Promise.all ing
   if not to # 不然可能缓存了中间态，比如中译英，英还没译为其他，但是已经缓存了英文的哈希
     changeSave changed
     for i from (i18n.on?.end or [])
