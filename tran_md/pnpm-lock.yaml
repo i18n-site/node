@@ -29,9 +29,6 @@ dependencies:
   '@w5/read':
     specifier: ^0.0.1
     version: 0.0.1
-  '@w5/req':
-    specifier: ^0.0.13
-    version: 0.0.13
   '@w5/utf8':
     specifier: ^0.0.3
     version: 0.0.3

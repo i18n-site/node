@@ -95,6 +95,7 @@ export default (
   if to_tran_htm.length or to_tran_txt.length
     [h,t] = await reqMsg API+'tran', {
       method: 'POST'
+      timeout: 100
       body:JSON.stringify [
         from_lang
         to_lang

@@ -23,7 +23,6 @@
     "@8n/title-case": "^0.0.5",
     "@8n/tran": "^0.0.5",
     "@w5/read": "^0.0.1",
-    "@w5/req": "^0.0.13",
     "@w5/utf8": "^0.0.3"
   },
   "devDependencies": {
