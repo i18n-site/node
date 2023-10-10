@@ -28,7 +28,7 @@
     #   pos_li = txt_pos
     #   txt_li.push unescape i
     # else
-    if i
+    if i and not i.startswith('<pre')
       htm_li.push i
       # htm_txt_li.push _md_li[n]
       p = pos_li[n]
