@@ -5,7 +5,7 @@ export default [
   ],
   [
     "zh",
-    "中文"
+    "简体中文"
   ],
   [
     "es",
@@ -521,7 +521,7 @@ export default [
   ],
   [
     "zh-TW",
-    "繁體中文"
+    "正體中文"
   ],
   [
     "ts",

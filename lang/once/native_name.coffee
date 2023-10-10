@@ -44,6 +44,11 @@ for i from htm
       en = en.split('>').pop()
       native_name = native_name.split('>').pop()
       en_name_li.push [code, en]
+      switch native_name
+        when '中文'
+          native_name = '简体中文'
+        when '繁體中文'
+          native_name = '正體中文'
       native_name_li.push [code, native_name]
       CODE.delete code
 
