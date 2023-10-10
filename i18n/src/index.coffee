@@ -74,7 +74,6 @@ I18N_NT = 'i18n.nt'
         from_fp = join pwd, from_rel
         to_fp = join pwd, to_rel
         from_change = isChange(from_rel)
-        console.log from_change, from_fp
         if from_change or isChange(to_rel)
           loop
             if from_lang == pre_lang
