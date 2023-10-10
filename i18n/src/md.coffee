@@ -24,8 +24,9 @@ tranMd = cache (dir, relpath, from_lang)=>
     join dir,'.i18n',"#{from_lang}.#{to_lang}", relpath
     ...args
   )
-  write(
-    join dir, to_lang, relpath
-    out
-  )
+  if out != undefined
+    write(
+      join dir, to_lang, relpath
+      out
+    )
   return
