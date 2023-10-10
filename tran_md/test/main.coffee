@@ -7,9 +7,9 @@
   path > join
 
 ROOT = uridir(import.meta)
-lang = 'ja'
+lang = 'en'
 langfp = join(ROOT,lang+'.md')
-form_lang = 'en'
+form_lang = 'zh'
 md = await tranMd(
   read join ROOT, form_lang+'.md'
   form_lang

@@ -1,48 +1,51 @@
-# I18N.SITE · 国境なき言語<img Src="//ok0.pw/5l" Style="float:right;width:42px;margin-Top:6px">
+# I18N.SITE · Language Without Borders<img Src="//ok0.pw/5l" Style="float:right;width:42px;margin-Top:6px">
 
-多言語静的サイト ジェネレーターである I18N.SITE は、Markdown を[100 以上の異なる言語](https://github.com/i18n-site/node/blob/main/lang/src/index.js)に自動的に翻訳できます。
+I18N.SITE, a multi-language static site generator, can automatically translate Markdown into [more than a hundred different languages](https://github.com/i18n-site/node/blob/main/lang/src/index.js) .
 
 <img src="http://s-cd-3653-i18n-img.oss.dogecdn.com/i18n.lang.webp" alt="" />
 
-ブラウザに翻訳機能が組み込まれているので、Web サイトを国際化する必要はないのではないかと疑問に思う人もいるかもしれません。
+Some people may want to ask, now that browsers have built-in translation functions, is it unnecessary to internationalize the website?
 
-**サイト全体を国際化することによってのみ、多言語のサイト内全文検索と検索エンジンの最適化をサポートできると**言いたいのです。
+I want to say that **only by internationalizing the entire site can we support multi-lingual in-site full-text search and search engine optimization** .
 
-## チュートリアル
+## Tutorial
 
-## 機能紹介
+## Function Introduction
 
-### マークダウン形式を維持する
+### Keep Markdown Format
 
-### 翻訳の変更
+### Modify Translation
 
-変換を変更した後、 `./i18n.sh`を再実行してキャッシュを更新する必要があります。
+After modifying the translation, you need to re-run `./i18n.sh` to update the cache.
 
-### 翻訳メモ
+### Translation Notes
 
-翻訳コメントでは、 ` ```rust`のように \``` の後に言語を示す必要があります。
+Translation comments need to indicate the language after \```, such as ` ```rust` .
 
-現在、rust、c、cpp、java、js、coffee、python、bash のコメント翻訳をサポートしています。
+Currently supports comment translation for rust, c, cpp, java, js, coffee, python, and bash.
 
-[tran_md/src/comment.coffee](https://github.com/i18n-site/node/blob/main/tran_md/src/comment.coffee)を編集して、より多くの言語のコメントの翻訳サポートを追加します。
+Edit [tran_md/src/comment.coffee](https://github.com/i18n-site/node/blob/main/tran_md/src/comment.coffee) to add translation support for comments in more languages.
 
-### プロキシの構成
+### Configure Proxy
 
-次の環境変数を設定すると、Google Translate API 呼び出しがプロキシを経由できるようになります。
+Setting the following environment variables allows Google Translate API calls to go through the proxy.
 
 ```bash
 export https_proxy=http://127.0.0.1:7890
 ```
 
-### 変数の埋め込み
+### Variable Embedding
 
 ```
 test: 测试变量<br 0>嵌入
 ```
 
-### キャッシュを空にしてください
+### Empty The Cache
 
 ```bash
 rm -rf .i18n/.cache
 ```
+
+> Quote 1
+> > Quote 2
 
