@@ -83,7 +83,7 @@ I18N_NT = 'i18n.nt'
                   fp
                   to_lang
                   from_lang
-                  from_change
+                  existsSync(to_fp) and from_change
                 )
                 bar()
                 return
