@@ -47,7 +47,6 @@ I18N_NT = 'i18n.nt'
   ing = []
   + pre_lang
   for [to_lang,from_lang] from to_from
-    bar()
     from_dir = join pwd, from_lang
     if not existsSync from_dir
       continue
@@ -78,13 +77,16 @@ I18N_NT = 'i18n.nt'
         if from_change or isChange(to_rel)
           loop
             if from_lang == pre_lang
-              ing.push func(
-                pwd
-                fp
-                to_lang
-                from_lang
-                from_change
-              )
+              ing.push do =>
+                await func(
+                  pwd
+                  fp
+                  to_lang
+                  from_lang
+                  from_change
+                )
+                bar()
+                return
               changed.add to_rel
               break
             else
