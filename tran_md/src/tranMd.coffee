@@ -16,7 +16,6 @@
 
   [prefix_suffix, md_li] = mdpsfix(src,pos_li)
 
-
   htm_li = []
   htm_pos = []
   for i,n in md_li.map(mark).map(
@@ -29,17 +28,17 @@
     #   pos_li = txt_pos
     #   txt_li.push unescape i
     # else
-    htm_li.push i
-    # htm_txt_li.push _md_li[n]
-    p = pos_li[n]
-    delete src[p]
-    htm_pos.push [
-      p
-      ...prefix_suffix[n]
-    ]
+    if i
+      htm_li.push i
+      # htm_txt_li.push _md_li[n]
+      p = pos_li[n]
+      delete src[p]
+      htm_pos.push [
+        p
+        ...prefix_suffix[n]
+      ]
 
   [code_li, comment_li] = codePos(src,code_pos_li)
-
 
   [
     comment_li
