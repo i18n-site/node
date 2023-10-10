@@ -19,5 +19,5 @@ console.log await minw 123
 output :
 
 ```
-./out.txt
+undefined
 ```

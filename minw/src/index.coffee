@@ -2,7 +2,7 @@
   {clientWidth, clientHeight:height} = b
   w = clientWidth
   diff = 128
-  while diff # 避免最后一行标签太少
+  while w > 12 # 避免最后一行标签太少
     if diff > clientWidth
       diff /= 2
       continue
