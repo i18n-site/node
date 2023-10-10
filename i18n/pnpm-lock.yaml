@@ -21,11 +21,11 @@ dependencies:
     specifier: ^0.0.12
     version: 0.0.12
   '@8n/tran':
-    specifier: ^0.0.7
-    version: 0.0.7
+    specifier: ^0.0.8
+    version: 0.0.8
   '@8n/tran_md':
-    specifier: ^0.0.27
-    version: 0.0.27
+    specifier: ^0.0.28
+    version: 0.0.28
   '@w5/bar':
     specifier: ^0.0.5
     version: 0.0.5
@@ -35,6 +35,9 @@ dependencies:
   '@w5/ext':
     specifier: ^0.0.1
     version: 0.0.1
+  '@w5/pool':
+    specifier: ^0.0.6
+    version: 0.0.6
   '@w5/u8':
     specifier: ^0.0.3
     version: 0.0.3
@@ -125,8 +128,8 @@ packages:
     resolution: {integrity: sha512-J5IDWPFwkBdiOkkAVIXn94I426n2Z/mEM77eD/GscomhkBWOJQb1s5RagzjTrpTqY6Uup/sBoCsBAvgVfSbgAw==}
     dev: false
 
-  /@8n/tran@0.0.7:
-    resolution: {integrity: sha512-IHdDyADXEE6Dmgre/TNjte1PJWCcNF84uUmRuyy1cr4Wk/4t3/Lx6Pe1IwnptUy/MdfM1C1z0p1FfEjCxoK7GA==}
+  /@8n/tran@0.0.8:
+    resolution: {integrity: sha512-3THn2mVN6M4709W3d5WAOHyh70vYSymLOEWe47ugviqm6X64nRzY9j96PboSN3oUdOlp9AezGheq/X1FHhSe4g==}
     dependencies:
       '@w5/j2f': 0.0.1
       '@w5/req': 0.0.13
@@ -136,8 +139,8 @@ packages:
       - supports-color
     dev: false
 
-  /@8n/tran_md@0.0.27:
-    resolution: {integrity: sha512-LfZR4RlSeHrFIFRCSZPbpOMfjrzjwjfra7HiRJ5p06pC5SaJ1XtJIQe1TM1H9OetPLNoSGgRiE2/fgQOuOBrEw==}
+  /@8n/tran_md@0.0.28:
+    resolution: {integrity: sha512-uqxcou/VJ43N4mFEZaAR1lqfwoIRANMuSJltd38OmCEE4QyZG4a/zLMsXpC7GqJhRtc9kcf+BOq3i/6AxAkoig==}
     dependencies:
       '@8n/cache_map': 0.0.13
       '@8n/comment': 0.0.2
@@ -145,7 +148,7 @@ packages:
       '@8n/mark': 0.0.1
       '@8n/replace_n': 0.0.4
       '@8n/title-case': 0.0.5
-      '@8n/tran': 0.0.7
+      '@8n/tran': 0.0.8
       '@w5/read': 0.0.1
       '@w5/utf8': 0.0.3
     transitivePeerDependencies:
@@ -247,6 +250,10 @@ packages:
     resolution: {integrity: sha512-qxxXCYjFke5+Gtsw5E5fhsmVgEs4JiR6ZnamrkSIL4TkQS7vOFzu+gXhQiPbfDvdd6Tk8Sptv7y1FmJ3qeMq2Q==}
     dependencies:
       msgpackr: 1.9.9
+    dev: false
+
+  /@w5/pool@0.0.6:
+    resolution: {integrity: sha512-zWAz+CR6JcZInXm+Pqxi7+WMELGkRddkZ8Tey6xwegxPZhRjVIhaQorlnerEvST6tWbwpy6mPdpxjImSt2orng==}
     dev: false
 
   /@w5/read@0.0.1:

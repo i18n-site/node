@@ -4,6 +4,7 @@
   ./md.js
   ./toFrom.js
   @8n/cache
+  @w5/pool > Pool
   @w5/ext
   @w5/bar:Bar
   @w5/walk > walkRel
@@ -44,9 +45,13 @@ I18N_NT = 'i18n.nt'
 
   bar = Bar to_from.length
 
-  ing = []
+  pool = Pool 99
   + pre_lang
   for [to_lang,from_lang] from to_from
+    if from_lang != pre_lang
+      await pool.done
+      pre_lang = from_lang
+
     from_dir = join pwd, from_lang
     if not existsSync from_dir
       continue
@@ -75,26 +80,19 @@ I18N_NT = 'i18n.nt'
         to_fp = join pwd, to_rel
         from_change = isChange(from_rel)
         if from_change or isChange(to_rel)
-          loop
-            if from_lang == pre_lang
-              ing.push do =>
-                await func(
-                  pwd
-                  fp
-                  to_lang
-                  from_lang
-                  (not existsSync(to_fp)) or from_change
-                )
-                bar()
-                return
-              changed.add to_rel
-              break
-            else
-              await Promise.all ing
-              ing = []
-              pre_lang = from_lang
+          await pool =>
+            await func(
+              pwd
+              fp
+              to_lang
+              from_lang
+              (not existsSync(to_fp)) or from_change
+            )
+            bar()
+            return
+          changed.add to_rel
 
-  await Promise.all ing
+  await pool.done
   if not to # 不然可能缓存了中间态，比如中译英，英还没译为其他，但是已经缓存了英文的哈希
     changeSave changed
     for i from (i18n.on?.end or [])
