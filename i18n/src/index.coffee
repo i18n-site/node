@@ -76,7 +76,6 @@ I18N_NT = 'i18n.nt'
         to_fp = join pwd, to_rel
         from_change = isChange(from_rel)
         if from_change or isChange(to_rel)
-          console.log {from_change}
           loop
             if from_lang == pre_lang
               ing.push func(
