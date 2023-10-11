@@ -28,7 +28,9 @@
     #   pos_li = txt_pos
     #   txt_li.push unescape i
     # else
-    if i and not i.startsWith('<pre')
+    if i and not i.startsWith('<pre') and not (
+      i.length == 5 and i.toLowerCase() == '[toc]'
+    )
       htm_li.push i
       # htm_txt_li.push _md_li[n]
       p = pos_li[n]
