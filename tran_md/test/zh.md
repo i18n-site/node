@@ -1,6 +1,6 @@
-# I18N.SITE · 语言无国界 <img src="//ok0.pw/5l" style="float:right;width:42px;margin-top:6px">
+# 3Ti.SITE · 语言无国界 <img src="//ok0.pw/5l" style="float:right;width:42px;margin-top:6px">
 
-I18N.SITE，多语言的静态站点生成器，能将 Markdown 自动翻译为 [一百多种不同的语言](https://github.com/i18n-site/node/blob/main/lang/src/index.js) 。
+3Ti.SITE，多语言的静态站点生成器，能将 Markdown 自动翻译为 [一百多种不同的语言](https://github.com/i18n-site/node/blob/main/lang/src/index.js) 。
 
 ![](http://s-cd-3653-i18n-img.oss.dogecdn.com/i18n.lang.webp)
 
