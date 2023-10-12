@@ -47,7 +47,7 @@ svelte = (txt)=>
           /\s>([^\s]+)/g
           (_,s1)=>
             pug_i18n.add s1
-            ' {'+s1+'}'
+            ' {@html '+s1+'$}'
         )
     else if line.startsWith '<script'
       in_script = true
@@ -74,7 +74,7 @@ svelte = (txt)=>
     js.push "`var #{var_li.join(',')};onMount(onI18n(o=>({#{dict_li.join(',')}}=o)))`"
     r[script_line] += js.join(';')
 
-  # console.log(r.join('\n'))
+  console.log(r.join('\n'))
   return r.join('\n')
 
 sveltePreprocess.unshift(
