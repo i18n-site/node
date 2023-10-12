@@ -43,6 +43,11 @@ svelte = (txt)=>
           (_,s1,s2)=>
             pug_i18n.add s1
             ':'+s1+'$'+s2
+        ).replace(
+          /\s>([^\s]+)/g
+          (_,s1)=>
+            pug_i18n.add s1
+            ' {'+s1+'}'
         )
     else if line.startsWith '<script'
       in_script = true
