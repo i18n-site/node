@@ -1,0 +1,24 @@
+{
+  "name": "@3-/direnv_dump",
+  "version": "0.1.2",
+  "repository": {
+    "type": "git",
+    "url": "git+https://atomgit.com/i18n/lib.git"
+  },
+  "homepage": "https://atomgit.com/i18n/lib/tree/dev/direnv_dump",
+  "author": "i18n.site@gmail.com",
+  "license": "Apache-2.0",
+  "exports": {
+    ".": "./lib/index.js",
+    "./*": "./lib/*"
+  },
+  "files": [
+    "lib/*"
+  ],
+  "devDependencies": {},
+  "scripts": {},
+  "bin": {
+    "direnv_dump": "./lib/index.js"
+  },
+  "type": "module"
+}
