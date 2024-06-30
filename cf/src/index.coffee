@@ -32,8 +32,11 @@ export default new Proxy(
       )
       try
         r = JSON.parse(text)
-        if r.success
-          return r.result
-      throw new Error(text)
+      catch
+        throw new Error('NOT JSON:' + text)
+
+      if r.success
+        return r.result
+      throw new Error(r.errors[0].message)
       return
 )

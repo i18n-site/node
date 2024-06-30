@@ -16,14 +16,21 @@ process.on(
     return
 )
 
-for i from await flatten(
-  'AAAA'
-  # 'A'
-  'i18n.site'
-  'i18n.site.a.bdydns.com'
-  'user0.cf'
-)
-  console.log '>',i
+arg_li = [
+  # [
+  #   '3ti.site'
+  #   '3ti.site.s2-web.dogedns.com'
+  #   'u-01.eu.org'
+  # ]
+  ['i18n.site', 'i18n.site.a.bdydns.com','x01.site']
+]
+for arg from arg_li
+  for type from ['A','AAAA']
+    for i from await flatten(
+      type
+      ...arg
+    )
+      console.log '>',type,arg[0]
 ```
 
 output :

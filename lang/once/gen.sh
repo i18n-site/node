@@ -2,13 +2,10 @@
 
 DIR=$(realpath $0) && DIR=${DIR%/*}
 cd $DIR
+eval $(mise env)
 set -ex
 
-d() {
-  direnv exec . $1
-}
-
-d ./rust.coffee
-d ./case.coffee
-d ./code_id.coffee
-d ./nospcae.coffee
+./rust.coffee
+./case.coffee
+./code_id.coffee
+./nospcae.coffee

@@ -1,6 +1,6 @@
 {
   "name": "@3-/dogessl",
-  "version": "0.1.1",
+  "version": "0.1.4",
   "repository": {
     "type": "git",
     "url": "git+https://atomgit.com/i18n/lib.git"
@@ -18,7 +18,7 @@
   "scripts": {},
   "type": "module",
   "peerDependencies": {
-    "@3-/doge": "^0.1.7",
+    "@3-/doge": "^0.1.8",
     "cdnssl": "^0.1.7"
   },
   "dependencies": {}

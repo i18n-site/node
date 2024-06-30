@@ -9,7 +9,7 @@
   "author": "i18n.site@gmail.com",
   "license": "Apache-2.0",
   "exports": {
-    ".": "./lib/index.js",
+    ".": "./lib/lib.js",
     "./*": "./lib/*"
   },
   "files": [

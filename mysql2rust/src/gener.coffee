@@ -14,7 +14,7 @@
     p = args.lastIndexOf ' RETURNS '
     if p<0
       return
-    _return = args.slice(p+9)
+    _return = args.slice(p+9).split('\n',1)[0]
     args = args.slice(0,p)
     args = args.slice(0,args.lastIndexOf(')')).split(',').map(
       (i)=>i.replaceAll('`','').trim()

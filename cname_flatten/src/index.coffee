@@ -114,7 +114,7 @@ recordsByZoneId = (zoneId, name, type, default_host)=>
       return
     return
 
-  ok_ip_li = await cdncheck(name,'.i',[...ip_set])
+  ok_ip_li = await cdncheck(name,'.js',[...ip_set])
   if not ok_ip_li.length
     throw new NoRecordError "#{type} #{name} #{cname} #{default_host}"
 

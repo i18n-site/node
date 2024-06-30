@@ -32,6 +32,7 @@ sslIter = (exist)->
     exist.set host,i
   exist
 
+
 < certKey = (dir, host)=>
   key = join ACME,dir,host+'.key'
   stats = statSync(key)
@@ -75,7 +76,9 @@ uploadSet = (upload, set, host, dir, host_li)=>
       return true
     return
 
-  for i from await cdnLs()
+  li = await cdnLs()
+
+  for i from li
     if i.startsWith('.')
       name = i.slice(1)
     else

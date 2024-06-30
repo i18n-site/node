@@ -19,7 +19,7 @@ export default (ROOT)=>
   )
     STYL.push i
 
-  console.log '# styl\n\n'+STYL.join '\n'
+  console.log '\n# styl\n'+STYL.join '\n'
 
   li = []
   for i from STYL

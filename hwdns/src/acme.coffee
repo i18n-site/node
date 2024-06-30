@@ -24,10 +24,10 @@ ACME_CHALLENGE='_acme-challenge'
       name = name.slice(0,-1)
     if name != ACME_CHALLENGE+'.'+host
       continue
-    console.log name, i.type, i.status, i.records
+    # console.log name, i.type, i.status, i.records
     if i.type == 'CNAME'
+      to_enable.push id
       if i.status == 'ACTIVE'
-        to_enable.push id
         await disable id
     else
       to_rm.push id
@@ -35,5 +35,5 @@ ACME_CHALLENGE='_acme-challenge'
 
   =>
     for i from to_enable
-      await i
+      await enable i
     return

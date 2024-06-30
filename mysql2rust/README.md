@@ -7,13 +7,12 @@
 ```coffee
 #!/usr/bin/env coffee
 
-> @3-/uridir
-  path > join
+> path > join
   @3-/read
   ../lib/sqlLi.js
 
 
-ROOT = uridir import.meta
+ROOT = import.meta.dirname
 
 for table from [
   '3ti'
@@ -87,7 +86,7 @@ output :
   'table',
   'watch',
   'CREATE TABLE `watch` (\n' +
-    "  `id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,`host_id` BIGINT UNSIGNED NOT NULL,`kind_id` BIGINT UNSIGNED NOT NULL,`dns_type` TINYINT UNSIGNED NOT NULL,`ts` BIGINT UNSIGNED NOT NULL DEFAULT '0',`err` INT UNSIGNED NOT NULL DEFAULT '0',`url_id` BIGINT UNSIGNED NOT NULL DEFAULT '0',PRIMARY KEY (`id`),UNIQUE KEY `watch_UN` (`dns_type`,`kind_id`,`host_id`,`url_id`),KEY `watch_kind_IDX` (`kind_id`,`ts`)\n" +
+    '  `id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,`host_id` BIGINT UNSIGNED NOT NULL,`kind_id` BIGINT UNSIGNED NOT NULL,`dns_type` TINYINT UNSIGNED NOT NULL,`ts` BIGINT UNSIGNED NOT NULL DEFAULT 0,`err` INT UNSIGNED NOT NULL DEFAULT 0,`url_id` BIGINT UNSIGNED NOT NULL DEFAULT 0,PRIMARY KEY (`id`),UNIQUE KEY `watch_UN` (`dns_type`,`kind_id`,`host_id`,`url_id`),KEY `watch_kind_IDX` (`kind_id`,`ts`)\n' +
     ');'
 ]
 [
@@ -102,9 +101,9 @@ output :
     'END ;;'
 ]
 [
-  'function',
-  'hostId',
-  'CREATE FUNCTION "hostId"(val VARBINARY(255)) RETURNS BIGINT UNSIGNED\n' +
+  'trigger',
+  'watchLog',
+  'CREATE DEFINER="avnadmin"@"%" FUNCTION "hostId"(val VARBINARY(255)) RETURNS BIGINT UNSIGNED\n' +
     'BEGIN\n' +
     ' DECLARE id BIGINT UNSIGNED;\n' +
     ' SELECT host.id INTO id FROM host WHERE v=val;\n' +
@@ -116,9 +115,9 @@ output :
     'END ;;'
 ]
 [
-  'function',
-  'urlId',
-  'CREATE FUNCTION "urlId"(val VARBINARY(255)) RETURNS BIGINT UNSIGNED\n' +
+  'trigger',
+  'watchLog',
+  'CREATE DEFINER="avnadmin"@"%" FUNCTION "urlId"(val VARBINARY(255)) RETURNS BIGINT UNSIGNED\n' +
     'BEGIN\n' +
     ' DECLARE id BIGINT UNSIGNED;\n' +
     ' SELECT url.id INTO id FROM url WHERE v=val;\n' +

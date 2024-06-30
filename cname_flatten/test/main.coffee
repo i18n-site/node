@@ -10,11 +10,11 @@ process.on(
 )
 
 arg_li = [
-  [
-    '3ti.site'
-    '3ti.site.s2-web.dogedns.com'
-    'u-01.eu.org'
-  ]
+  # [
+  #   '3ti.site'
+  #   '3ti.site.s2-web.dogedns.com'
+  #   'u-01.eu.org'
+  # ]
   ['i18n.site', 'i18n.site.a.bdydns.com','x01.site']
 ]
 for arg from arg_li

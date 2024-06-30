@@ -1,8 +1,10 @@
 #!/usr/bin/env coffee
 
-> @3-/hwdns/mail.js
+> @3-/hwdns/purge
 
-host = 'i18n.site'
+
+# await purge 'i18n.site'
+
 
 # MX 数值越小优先级越高
 

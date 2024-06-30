@@ -65,8 +65,9 @@ export default =>
           key
         }
       catch err
-        console.error host, '上传证书失败\n', err, { cert }
-
+        console.error host, '上传证书失败'
+        if err.data
+          console.log err.code, err.data.Message
       return
     set
   )

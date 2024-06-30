@@ -1,6 +1,6 @@
 {
   "name": "@3-/zx",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "repository": {
     "type": "git",
     "url": "git+https://atomgit.com/i18n/lib.git"
@@ -18,6 +18,6 @@
   "scripts": {},
   "type": "module",
   "peerDependencies": {
-    "zx": "^8.0.2"
+    "zx": "^8.1.2"
   }
 }

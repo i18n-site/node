@@ -1,12 +1,11 @@
 #!/usr/bin/env coffee
 
-> @3-/uridir
-  path > join
+> path > join
   @3-/read
   ../lib/sqlLi.js
 
 
-ROOT = uridir import.meta
+ROOT = import.meta.dirname
 
 for table from [
   '3ti'

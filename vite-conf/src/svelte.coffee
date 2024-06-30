@@ -4,6 +4,7 @@
   @3-/coffee_plus
   ansis > greenBright
   path > join dirname
+  fs > existsSync
   coffeescript
 
 compile = CoffeePlus(coffeescript)
@@ -169,6 +170,7 @@ export svelte = (txt, fp, rfp, i18n)=>
 
 < (dir)=>
   len = dir.length + 1
+  i18n_fp = join(dir, ".gen/i18n/index.js")
   sveltePreprocess.unshift(
     markup: ({content, filename})=>
       if filename.endsWith '.svelte'
@@ -176,8 +178,8 @@ export svelte = (txt, fp, rfp, i18n)=>
         console.log greenBright relpeath
         return {
           code: svelte(
-            content, filename, relpeath,
-            await import(join(dir, ".gen/i18n/index.js"))
+            content, filename, relpeath
+            if existsSync(i18n_fp) then await import(i18n_fp) else {}
           )
         }
       return

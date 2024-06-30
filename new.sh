@@ -2,6 +2,12 @@
 
 DIR=$(realpath ${0%/*})
 cd $DIR
+
+if [ -d "$1" ]; then
+  echo "$1 EXIST"
+  exit 1
+fi
+
 set -ex
 
 cp -R tmpl $1

@@ -1,8 +1,15 @@
 #!/usr/bin/env coffee
 
-> @3-/doge
+> @3-/doge:Doge
   cdnssl > bind
   path > dirname join
+
+{env} = process
+
+doge = Doge(
+  env.DOGECLOUD_accessKey
+  env.DOGECLOUD_secretKey
+)
 
 api = (url,data)=>
   doge("cdn/#{url}", data)
@@ -30,7 +37,7 @@ export default =>
           private:key
         }
       )
-      id
+      return id
 
     # set
     (host, cert, cert_id)=>

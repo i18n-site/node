@@ -2,6 +2,7 @@
 
 DIR=$(realpath ${0%/*})
 cd $DIR
+eval $(mise env)
 set -ex
 
 if [ -z "$1" ]; then
@@ -11,4 +12,4 @@ fi
 
 cd $1
 
-exec direnv exec . dist.coffee $DIR
+dist.coffee $DIR

@@ -1,14 +1,14 @@
 > @3-/redis/R.js
   @3-/write
   @3-/read
-  @3-/nt/load.js
+  @3-/yml/index.js > load
   @3-/u8/u8merge.js
   @3-/utf8/utf8e.js
   @3-/intbin > u64Bin
-  @3-/lang/CODE.js
+  @3-/lang/CODE_ID.js
   @3-/snake > SNAKE
   path > join basename dirname
-  fs > existsSync
+  fs > existsSync readdirSync
 
 const_bytes = (key)=>
   "pub const #{SNAKE key}: &[u8] = b#{JSON.stringify(key)};"
@@ -17,41 +17,47 @@ ignore = (i)=>
   i = basename(i)
   i.startsWith('.') or ['node_modules'].includes(i)
 
-kv = (dir, file_li, lang_set)=>
+kv = (dir, lang_set)=>
+  file_set = new Set
   prefix = basename dirname dir
   for lang from lang_set
     pwd = join dir, lang
     o = {}
-    i18n_nt = join pwd, 'i18n.nt'
-    if existsSync i18n_nt
-      for [k,v] from Object.entries load i18n_nt
+    i18n_yml = join pwd, 'i18n.yml'
+    if existsSync i18n_yml
+      for [k,v] from Object.entries load i18n_yml
         o[k] = v
 
+    file_li = readdirSync pwd
     for fp from file_li
-      md = read join pwd, fp
-      md = md.replace(
-        /<br\s+_([^\/>]+)_>/g
-        (_,s)=>
-          '${'+s+'}'
-      ).trim()
-      o[fp.slice(0,-3)] = md
-    key = Buffer.from u8merge(
-      utf8e(prefix+'I18n:')
-      u64Bin CODE.indexOf(lang)
-    )
-    await R.hmset key, o
+      if fp.endsWith('.md') and not fp.startsWith('.')
+        file_set.add fp
+        md = read join pwd, fp
+        o[fp.slice(0,-3)] = md
+
+    lang_id = CODE_ID.get(lang)
+    if lang_id != undefined
+      key = Buffer.from u8merge(
+        utf8e(prefix+'I18n:')
+        u64Bin lang_id
+      )
+      await R.hmset key, o
+    else
+      console.error("unkown lang #{lang}")
+
+  i18nRs(dir, file_set, lang_set)
   return
 
-i18nRs = (dir, file_li, lang_set)=>
+i18nRs = (dir, file_set, lang_set)=>
   i18n = []
   for lang from lang_set
     pwd = join dir, lang
-    i18n_nt = join pwd, 'i18n.nt'
-    if existsSync i18n_nt
-      keys = Object.keys load i18n_nt
+    i18n_yml = join pwd, 'i18n.yml'
+    if existsSync i18n_yml
+      keys = Object.keys load i18n_yml
       for key from keys
         i18n.push const_bytes key
-    for fp from file_li
+    for fp from file_set
       i18n.push const_bytes fp.slice(0,-3)
     break
 
@@ -102,13 +108,6 @@ macro_rules! throw {
   console.log outfp
   return
 
-< (dir, file_li, to_from)=>
-  lang_set = new Set
-  for li from to_from
-    for i from li
-      lang_set.add i
-  await Promise.all [
-    i18nRs(dir, file_li, lang_set)
-    kv(dir, file_li, lang_set)
-  ]
+< (dir, lang_set)=>
+  await kv(dir, lang_set)
   return

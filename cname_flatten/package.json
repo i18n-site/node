@@ -1,6 +1,6 @@
 {
   "name": "@3-/cname_flatten",
-  "version": "0.2.10",
+  "version": "0.2.11",
   "repository": {
     "type": "git",
     "url": "git+https://atomgit.com/i18n/lib.git"
@@ -16,7 +16,6 @@
     "lib/*"
   ],
   "peerDependencies": {
-    "@3-/cdncheck": "^0.1.15",
     "@3-/fetch": "^0.1.2",
     "@3-/hwdns": "^0.1.13",
     "@3-/retry": "^0.0.1",
@@ -27,6 +26,7 @@
   "scripts": {},
   "type": "module",
   "dependencies": {
+    "@3-/cdncheck": "workspace:^",
     "@3-/err": "^0.1.4"
   }
 }

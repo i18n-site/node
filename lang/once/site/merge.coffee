@@ -67,8 +67,8 @@ for i from google_en.keys()
   if not google_cn.has i
     console.log 'google cn miss',i
   if not ( volcengine.has(i) or ali.has(i) )
+    console.log 'miss',i, google_cn.get(i)
     continue
-    # console.log 'miss',i, google_cn.get(i)
   tr = translation[i]
   if tr
     if tr.dir != 'ltr'

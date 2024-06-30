@@ -6,21 +6,22 @@ DEFAULT_TIME = ' DEFAULT (unix_timestamp())'
 
 < (sql)=>
   li = []
-  sql = sql.replaceAll(
-    ' unsigned',' UNSIGNED'
-  ).replaceAll(
-    ' return '
-    ' RETURN '
-  ).replaceAll(
-    ' returns '
-    ' RETURNS '
-  ).replaceAll(
-    ' DEFAULT current_timestamp()', DEFAULT_TIME
-  ).replaceAll(
-    ' DEFAULT CURRENT_TIMESTAMP', DEFAULT_TIME
-  ).replaceAll(
-    ' DEFAULT unix_timestamp()', DEFAULT_TIME
-  )
+
+  sql = sql
+    .replace(/ AUTO_INCREMENT\s?=[^;]+;/g, ";")
+    .replace(/ DEFINER\s?=\s?`[^`]+`@`%` /g, " ")
+    .replaceAll(" unsigned", " UNSIGNED")
+    .replaceAll(" return ", " RETURN ")
+    .replaceAll(" returns ", " RETURNS ")
+    .replaceAll(
+      " UNSIGNED NOT NULL DEFAULT '0'",
+      " UNSIGNED NOT NULL DEFAULT 0",
+    )
+    .replaceAll(" DEFAULT CURRENT_TIMESTAMP", DEFAULT_TIME)
+    .replaceAll(" DEFAULT current_timestamp()", DEFAULT_TIME)
+    .replaceAll(" DEFAULT unix_timestamp()", DEFAULT_TIME)
+    .replaceAll(/ BLOCK_SIZE \d+ LOCAL\b/g, " ")
+
   for t from [
     [/ varbinary\b/gi, ' VARBINARY']
     [/ varchar\b/gi, ' VARCHAR']
@@ -67,11 +68,6 @@ DEFAULT_TIME = ' DEFAULT (unix_timestamp())'
       continue
     else if i.startsWith(') ENGINE=')
       i = ');'
-    else if i.startsWith 'CREATE DEFINER='
-      for s,p in i.slice(15)
-        if s == ' '
-          break
-      i = 'CREATE'+i.slice(p+15)
 
 
     if i.endsWith ('*/;;')
@@ -89,7 +85,7 @@ DEFAULT_TIME = ' DEFAULT (unix_timestamp())'
       t = []
 
   for i from li
-    if i == 'DELIMITER ;;'
+    if (i == 'DELIMITER ;;') or i.startsWith('ALTER DATABASE ')
       continue
 
     m = i.match(CREATE)

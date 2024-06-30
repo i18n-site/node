@@ -10,13 +10,14 @@ _check = (host, path, ip)=>
   begin = +new Date()
   r = await fTxt(host, path, ip)
   if r.pop()!=200
+    console.error({host,path,ip },r)
     throw r
   [txt, header] = r
   pos = txt.indexOf('\n')
   if pos >= 0
     txt = txt.slice(0, pos)
   if txt != host
-    throw new CdnCheck
+    throw new CdnCheck JSON.stringify {host, path, ip, txt}
   return [
     ip
     new Date() - begin
