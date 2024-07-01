@@ -12,6 +12,6 @@ bun x cf_work_secret -e cf/.dev.vars
 cd cf
 rm -rf src
 
-bun build ../lib/main.js --minify --outfile src/main.js
+bun x esbuild ../lib/main.js --bundle --minify --outfile=src/main.js --format=esm --external:node:buffer
 
 nr deploy

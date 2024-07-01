@@ -8,12 +8,6 @@ bun i
 
 ./build.sh
 
-BIN=/opt/bin/npmv_refresh.mjs
-
-echo -e "#!/usr/bin/env -S node --trace-uncaught --expose-gc --unhandled-rejections=strict\n$(bun build ./lib/main.js --minify --target=node)" >$BIN
-
-chmod +x $BIN
-
 NAME=$(basename $DIR)
 
 cp $NAME.sh /opt/bin/

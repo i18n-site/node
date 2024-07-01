@@ -4,4 +4,4 @@ DIR=$(realpath ${0%/*})
 cd $DIR
 set -ex
 
-exec build
+exec mise exec -- build

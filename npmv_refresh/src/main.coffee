@@ -1,6 +1,7 @@
 #!/usr/bin/env coffee
 
-> path > resolve join
-  ./lib.js:run
+> ./lib.js:run
+  path > resolve join
 
-await run(process.argv.slice(2)[0])
+conf = process.argv.slice(2)[0]
+await run(conf)
